@@ -1,0 +1,50 @@
+<script>
+ 
+    // variavel que conterá o nome do produto a ter seu desvio analisado
+    let produto = (prompt("Qual o nome do produto?")).toLowerCase()
+
+    document.write("<p> Produto: " + produto + "</p>")
+
+    // determinar quantos meses houveram as tais vendas, para depois atribuir os valores contidos em cada mes
+    let meses = parseInt(prompt("Por quantos meses houve vendas de " + produto + "?"))
+    let valores = []
+
+    document.write("<p> Meses: " + meses + " meses </p>")
+
+    // laço de repeticao para assim ser atribuido dentro da lista de valores, o valor numerico de valor do produto em cada mes, de n meses
+    for (let i = 0; i < meses; i++) {
+        valores.push(parseFloat(prompt("Qual o valor de " + produto + " no mês " + (i + 1) + "?")))
+    }
+
+    console.log(valores)
+    document.write("<p> Analisando os dados: " + valores + ". </p>")
+
+    // determinando que a soma dos valores, inicialirizando-a em 0
+    let somaValores = 0
+
+    // dessa forma, colocar em um laço de repeticao que somará os valores da lsita na variavel da soma, pra fora dela dividir pelo numero de valores e determinar a media desses
+    for (let i = 0; i < valores.length; i++) {
+        somaValores += valores[i]
+    }
+
+    let media = somaValores/valores.length
+    console.log(media)
+
+    let conta = 0
+    let somaContas = 0
+
+    // equação da variancia, separada na parte superior da fração num laço de repetição e fora dele pegar essa equação e dividi-la pela quantidade de valores
+    for (let i = 0; i < valores.length; i++) {
+        conta = Math.pow((valores[i] - media), 2)
+        somaContas += conta
+    }
+    let variancia = somaContas/valores.length
+    console.log(variancia)
+
+    // calculo do desvio
+    let desvio = Math.sqrt(variancia)
+    console.log(desvio)
+
+    document.write("<p> Podemos chegar na conclusão que o desvio dos dados é de: " + desvio.toFixed(2) + ". </p>")
+
+</script>

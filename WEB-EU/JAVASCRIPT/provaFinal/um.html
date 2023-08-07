@@ -1,0 +1,56 @@
+<script>
+    let nrQuestoes = 5
+    let gabarito = []
+
+    for (let i = 0; i < nrQuestoes; i++) {
+        gabarito.push((String(prompt("Qual é a alternativa correta da questão " + (i + 1) + "?"))).toLowerCase())
+        if ((gabarito[i] === "a") || (gabarito[i] === "b") || (gabarito[i] === "c")) {
+            continue
+        } else {
+            alert("Não há essa alternativa")
+            gabarito.pop(gabarito[i])
+            i--
+        }
+    }
+
+    let nrAlunos = parseInt(prompt("Quantos alunos há na turma?"))
+    let gabaritoAlunos = []
+    let pontos = 0
+    let nota = 0
+    let aprovado = 0
+    let desaprovado = 0
+
+
+    for (let j = 0; j < nrAlunos; j++) {
+
+        for (let i = 0; i < nrQuestoes; i++) {
+            gabaritoAlunos.push((String(prompt("Qual foi o gabarito da prova do aluno " + (j + 1) + " na questão " + (i + 1) + "?"))).toLowerCase())
+
+            if ((gabaritoAlunos[i] === "a") || (gabaritoAlunos[i] === "b") || (gabaritoAlunos[i] === "c")) {
+                if (gabarito[i] === gabaritoAlunos[i]) {
+                    pontos++
+                } else {
+                    pontos = pontos
+                }
+            } else {
+                alert("Não há essa alternativa")
+                gabaritoAlunos.pop(gabaritoAlunos[i])
+                i--
+            }
+
+        }
+        nota = 2 * pontos
+
+        if (nota >= 7) {
+            aprovado++
+        } else {
+            desaprovado++
+        }
+        nota = 0
+        pontos = 0
+        gabaritoAlunos = []
+    }
+
+    document.write("O total de aprovados foi de " + aprovado + ". Enquanto o de desaprovados foi de " + desaprovado + ".")
+
+</script>

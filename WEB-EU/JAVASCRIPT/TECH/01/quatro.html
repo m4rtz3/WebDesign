@@ -1,0 +1,30 @@
+<script>
+    /* entrada de dados */
+    let nomeFunc = prompt("Qual o nome do funcionário?");
+    let nUniAtual = parseInt(prompt("Quantas unidades foram produzidas esse ano por esse funcionário?"))
+    let nUniAnt = parseInt(prompt("Quantas unidades foram produzidas no ano passado por esse funcionário?"))
+
+    /* análise de dados */
+    /* diferença entre esse ano e o ano anterior */
+    let unidadesAmais = nUniAtual - nUniAnt;
+
+    /*  primeiro, caso a pessoa nao tenho feito mais que no ano anterior */
+    if (nUniAtual <= nUniAnt) {
+        document.write(nomeFunc + " não receberá bônus, pois não produziu mais unidades este ano comparado com o ano anterior. Por uma diferença de " + (nUniAnt - nUniAtual) + ".")
+    } else {
+        /* caso ela tenha feito mais esse ano e receber o bonus */
+        if (unidadesAmais < 1001) {
+            document.write(nomeFunc + " por ter feito " + unidadesAmais + " unidades a mais esse ano comparado com o ano anterior, receberá um bônus de R$25,00.")
+        } else if (1000 < unidadesAmais && unidadesAmais < 3001) {
+            document.write(nomeFunc + " por ter feito " + unidadesAmais + " unidades a mais esse ano comparado com o ano anterior, receberá um bônus de R$50,00.")
+        } else if (3000 < unidadesAmais && unidadesAmais < 6001) {
+            document.write(nomeFunc + " por ter feito " + unidadesAmais + " unidades a mais esse ano comparado com o ano anterior, receberá um bônus de R$100,00.")
+        } else {
+            document.write(nomeFunc + " por ter feito " + unidadesAmais + " unidades a mais esse ano comparado com o ano anterior, receberá um bônus de R$200,00.")
+        }
+    }
+
+    /* saída (sem contar as saídas que já estão presentes dentro dos ifs) */
+    window.print();
+
+</script>

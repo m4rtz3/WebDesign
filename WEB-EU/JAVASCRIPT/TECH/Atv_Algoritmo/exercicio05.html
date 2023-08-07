@@ -1,0 +1,37 @@
+<script>
+    let comprimento = Number(prompt("Qual o comprimento da superfície da escrivaninha?"))
+    let largura = Number(prompt("Qual a largura da superfície da escrivaninha?"))
+    let tpMad = (prompt("Qual o tipo de madeira para a escrivaninha?")).toLowerCase()
+    let nmGav = parseInt(prompt("Quantas gavetas você deseja na sua escrivaninha?"))
+
+    let superficie = comprimento * largura
+    /* a variavel do orçamento: */
+    let Orc
+
+    switch (tpMad){
+        case 'mogno':
+
+        if (superficie > 1000) {
+            Orc = 1200 + 200 + (nmGav * 50) + 200
+        } else {
+            Orc = 1200 + 200 + (nmGav * 50)
+        }
+        break
+        case 'carvalho':
+        if (superficie > 1000) {
+            Orc = 1200 + 300 + (nmGav * 50) + 200
+        } else {
+            Orc = 1200 + 300 + (nmGav * 50)
+        }
+        break
+        default:
+        if (superficie > 1000) {
+            Orc = 1200 + (nmGav * 50) + 200
+        } else {
+            Orc = 1200 + (nmGav * 50)
+        }
+    }
+
+    document.write("O orçamento da escrivaninha será de " + Orc.toFixed(2) + ".")
+
+</script>

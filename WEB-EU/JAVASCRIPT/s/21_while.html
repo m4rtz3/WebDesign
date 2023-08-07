@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laços de Repetição - While</title>
+</head>
+
+<body>
+    <h1>Laços de Repetição - While</h1>
+
+    <ul id="cores">
+
+    </ul>
+
+
+    <script>
+        let cores = ["Lavanda", "Roxo", "Amarelo", "Preto", "Anil", "Branco", "Lilás", "Dourado", "Vermelho", "Violeta"];
+
+        let lista = document.getElementById("cores");
+
+        let cont = 0;
+        while (cont < 10) {
+            lista.innerHTML += "<li>" + cores[cont] + "</li>";
+
+            // cont = cont + 1;
+            // cont += 1;
+            cont++;
+        }
+
+        // lista.innerHTML += "<li>" + cores[0] + "</li>";
+        // lista.innerHTML += "<li>" + cores[1] + "</li>";
+        // lista.innerHTML += "<li>" + cores[2] + "</li>";
+        // lista.innerHTML += "<li>" + cores[3] + "</li>";
+        // lista.innerHTML += "<li>" + cores[4] + "</li>";
+        // lista.innerHTML += "<li>" + cores[5] + "</li>";
+        // lista.innerHTML += "<li>" + cores[6] + "</li>";
+        // lista.innerHTML += "<li>" + cores[7] + "</li>";
+        // lista.innerHTML += "<li>" + cores[8] + "</li>";
+        // lista.innerHTML += "<li>" + cores[9] + "</li>";
+
+    </script>
+
+</body>
+
+</html>

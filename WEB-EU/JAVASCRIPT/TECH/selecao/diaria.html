@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospedagem e diárias</title>
+
+    <script>
+
+        let diaria = parseInt(prompt("Por quantos dias você se hospedará?"));
+
+        if (diaria > 15) {
+            let taxa = 22.5 * diaria;
+            let conta = (250 * diaria) + taxa;
+            document.write("O valor da conta será de " + conta + ".")
+            window.print();
+        } else if (diaria == 15) {
+            let taxa = 56 * diaria;
+            let conta = (250 * diaria) + taxa;
+            document.write("O valor da conta será de " + conta + ".")
+            window.print();
+        } else {
+            let taxa = 88 * diaria;
+            let conta = (250 * diaria) + taxa;
+            document.write("O valor da conta será de " + conta + ".")
+            window.print();
+        }
+
+    </script>
+
+</head>
+
+<body>
+</body>
+
+</html>

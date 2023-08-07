@@ -1,0 +1,23 @@
+<script>
+    let cont = 1
+    let numero = parseInt(prompt("Digite um número"))
+    let fatorial
+
+    if (numero < 0) {
+        alert("O valor não é positivo")
+    
+    } else {
+        fatorial = cont = 1
+
+        /* for (cont == 1; cont <= numero; cont++) {
+            fatorial = fatorial * cont
+        } */
+
+        while (cont <= numero) {
+            fatorial = fatorial * cont
+            cont++
+        }
+
+        alert(numero + "! = " + fatorial)
+    }
+</script>

@@ -1,0 +1,59 @@
+<script>
+
+    let nmrCorr = parseInt(prompt("São quantos corredores?"))
+    let nomes = []
+
+    let tempoVoltas = []
+    let melhorVolta = 0
+    let melhoresCorr = []
+
+    for (let i = 0; i < nmrCorr; i++) {
+        nomes.push((String(prompt("Qual o nome do corredor " + (i + 1) + "?"))).toUpperCase())
+    }
+
+    for (let i = 0; i < nmrCorr; i++) {
+        for (let j = 0; j < 3; j++) {
+            tempoVoltas.push(Number(prompt("Qual foi o tempo da volta nº " + (j + 1) + " de " + nomes[i] + "?")))
+        }
+        for (let j = 0; j < tempoVoltas.length; j++) {
+            for (let k = 0; k < tempoVoltas.length - 1;) {
+                if (tempoVoltas[k] < tempoVoltas[k + 1]) {
+                    melhorVolta = tempoVoltas[k]
+                    tempoVoltas[k] = tempoVoltas[k + 1]
+                    tempoVoltas[k + 1] = melhorVolta
+
+                    k++
+                } else {
+                    k++
+                }
+            }
+        }
+        melhoresCorr.push(tempoVoltas[0])
+        tempoVoltas = []
+    }
+
+    let vencedor = 0
+    let nomeVencedor = 0
+
+    for (let i = 0; i < melhoresCorr.length; i++) {
+        for (let j = 0; j < melhoresCorr.length - 1;) {
+            if (melhoresCorr[j] < melhoresCorr[j + 1]) {
+                vencedor = melhoresCorr[j]
+                melhoresCorr[j] = melhoresCorr[j + 1]
+                melhoresCorr[j + 1] = vencedor
+
+                nomeVencedor = nomes[j]
+                nomes[j] = nomes[j + 1]
+                nomes[j + 1] = nomeVencedor
+
+                j++
+            } else {
+                j++
+            }
+        }
+    }
+
+    document.write("<p> 1º LUGAR: " + nomes[0] + "</p><p> TEMPO: " + melhoresCorr[0] + "</p> <hr>")
+
+
+</script>

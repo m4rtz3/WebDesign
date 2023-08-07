@@ -1,0 +1,39 @@
+<script>
+
+let a, b, c, d, e, f, g
+
+a = Number(prompt("Valor de a:"))
+b = Number(prompt("Valor de b:"))
+c = Number(prompt("Valor de c:"))
+d = Number(prompt("Valor de d:"))
+
+e = f = g = 0
+if(a > b && a > c && a > d) {
+    e = a
+} else if (b > a && b > c) {
+    e = b
+} else {
+    e = c
+}
+
+if(a > b || c > d) {
+    g = g + 1
+} else {
+    f = f + 1
+}
+
+if (b < c) {
+    e = e + 2
+    f = f + 2
+}
+
+if (d > a) {
+    e = e + 3
+    f = f + 3
+}
+
+g = g + 3
+
+alert(a + ", " + b + ", " + c + ", " + d + ", " + e + ", " + f + ", " + g)
+
+</script>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        #container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .caixaUm {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            text-align: center;
+        }
+
+        .caixaUm,
+        a,
+        p {
+            color: black;
+            text-decoration: none;
+        }
+
+        #container,
+        h1 {
+            color: goldenrod;
+        }
+    </style>
+
+    <title>Teste</title>
+
+
+</head>
+
+<body>
+    <div id="container">
+        <h1 class="teste">Testando</h1>
+        <div class="caixaUm">
+            <a href="https://www.sinonimos.com.br/" target="_blank" class="link">
+                <p>Texto aqui.</p>
+            </a>
+            <div class="imagem">
+                <img src="imagens/papel-couché.jpg" alt="">
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+
+        let link = document.getElementsByClassName("teste")[0];
+        link.addEventListener("mouseover", mostrarPrev);
+        link.addEventListener("mouseout", esconderPrev);
+
+        function mostrarPrev() {
+            let imagem = document.getElementsByClassName("imagem")[0];
+            imagem.style.display = block;
+        }
+
+        function esconderPrev() {
+            let imagem = document.getElementsByClassName("imagem")[0];
+            imagem.style.display = none;
+        }
+
+    </script>
+
+</body>
+
+</html>

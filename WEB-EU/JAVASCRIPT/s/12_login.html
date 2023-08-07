@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+
+<body>
+    <h1>Login:</h1>
+
+    <form class="formulario" action="#" method="post">
+        <label for="nomeUser">Nome:
+            <br />
+            <input type="text" name="campoNome" id="nomeUser">
+        </label>
+
+        <br>
+
+        <label for="emailUser">Email:
+            <br />
+            <input type="email" name="campoEmail" id="emailUser">
+        </label>
+
+        <br>
+
+        <label for="senhaUser">Senha:
+            <br>
+            <input type="password" name="campoSenha" id="senhaUser">
+        </label>
+
+    </form>
+
+    <script>
+
+        const formulario = document.getElementsByClassName("formulario")[0];
+        formulario.style.textAlign = "center";
+
+        let nome = document.getElementsByName("nomelUser")[0];
+        nomeUser.style.color = "green";
+
+        let email = document.getElementsByName("emailUser")[0];
+        emailUser.style.color = "goldenrod";
+
+        let senha = document.getElementsByName("senhaUser")[0];
+        senhaUser.style.color = "red";
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+<script>
+
+  // usuário digita dois numeros
+  let numeroUm = parseInt(prompt("Digite um número"))
+  let numeroDois = parseInt(prompt("Digite outro número, diferente do primeiro"))
+
+  let diferenca, aMais, maior
+  let contagem = []
+  let primos = []
+  let naoprimos = []
+
+  // checar numeros
+
+  if ((isNaN(numeroUm)) || (isNaN(numeroDois))) {
+    alert("O algoritmo só aceita números inteiros")
+  } else {
+
+    // se o usuario nao digitar o menor numero no primeiro prompt, deve-se dividir como ocorrerá a diferença entre o menor e maior numero digitados, independente da ordem em que foram digitados
+    if (numeroUm > numeroDois) {
+      maior = numeroUm
+      numeroUm = numeroDois
+      numeroDois = maior
+    }
+
+    // após a verificação de qual numero é maior ou não, devemos fazer a diferença entre os dois números para saber quantos números há entre eles
+    diferenca = numeroDois - numeroUm
+
+    // e com isso, nós começamos a fazer uma array que contenha cada um dos números entre o primeiro e segundo numero baseado em quantos numeros há, já incluindo o primeiro e o segundo juntos nessa sequencia (como o primeiro e ultimo numero da contagem)
+    for (let i = 0; i <= diferenca; i++) {
+      aMais = numeroUm + i
+      contagem.push(aMais)
+    }
+  }
+
+  // checar primos
+  // usando a array de acordo com quantos numeros há na sequencia da contagem, cada um é analisado para saber se a sua divisão por 2 dá o resto 0 ou não, caso dê resto 1, ele entra na lista de primos
+
+  for (let j = 0; j < contagem.length; j++) {
+    //pegando um numero de cada vez na sequencia determinada e iremos avaliar no loop se ele é primo ou nao
+    let nmr = contagem[j]
+    // para isso cria-se a variavel ehprimo, colocando o valor de 1 para se for primo e 0 para se não for
+    let ehprimo = 1
+
+    for (let k = 2; k < nmr; k++) {
+      if (nmr % k === 0) {
+        ehprimo = 0
+      }
+    }
+
+    if (nmr === 1) {
+      ehprimo = 0
+    }
+
+    if (ehprimo == 1) {
+      // quando no fim, a variavel obter o valor de 1 ao nao ser dividido por 2, ele será colocado na lista de primos
+      primos.push(nmr)
+    }
+  }
+
+  document.write("<p> Na sequência de " + contagem + "! </p><p>" + "São no total " + primos.length + " números primos! </p> <p> Sendo eles: "
+    + primos + "!</p>")
+
+  window.print()
+</script>

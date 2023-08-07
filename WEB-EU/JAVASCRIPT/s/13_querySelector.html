@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector</title>
+</head>
+
+<body>
+
+    <h1>Query Selector</h1>
+
+    <p id="paragrafo1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium impedit minima modi aperiam, officiis quis
+        alias non ut iure. Quod harum temporibus blanditiis facere ad, inventore cumque ratione itaque quidem.</p>
+
+    <p class="paragrafo">Voluptatem architecto dolorem a omnis iusto perspiciatis? Dolore, iure. Explicabo, blanditiis distinctio nisi
+        perferendis error possimus, architecto atque numquam facere accusantium provident cum at. Ducimus ad incidunt
+        officia! Placeat, possimus!</p>
+
+    <p id="paragrafo3">Ipsum illo assumenda, repellat hic sint ut dolor. Rem facilis cum aliquid sint veniam illo, temporibus, magnam
+        voluptatum eos officiis exercitationem incidunt perferendis nesciunt ipsum doloribus dicta repudiandae fuga
+        libero!</p>
+
+        <script>
+
+            document.body.style.textAlign = "center";
+
+            let paragrafo1 = document.querySelector("#paragrafo1");
+            paragrafo1.style.color = "red";
+
+            let paragrafo = document.querySelector(".paragrafo");
+            paragrafo.style.color = "goldenrod";
+
+            let paragrafo3 = document.querySelector("#paragrafo3");
+            paragrafo3.style.color = "green";
+
+        </script>
+</body>
+
+</html>

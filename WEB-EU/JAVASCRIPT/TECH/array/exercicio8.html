@@ -1,0 +1,19 @@
+<script>
+    let aleatorios = new Array(10)
+
+    for (let i = 0; i < aleatorios.length; i++) {
+        aleatorios[i] = parseInt(Math.random() * 10)
+    }
+    console.log(aleatorios)
+
+    for (let i = (aleatorios.length - 1); i >= aleatorios.length / 2; i--) {
+
+        let j = aleatorios.length - 1 - i
+        let transicao = aleatorios[j]
+        aleatorios[j] = aleatorios[i]
+        aleatorios[i] = transicao
+    }
+
+    console.log(aleatorios)
+
+</script>

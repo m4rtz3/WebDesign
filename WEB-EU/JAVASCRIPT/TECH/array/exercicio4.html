@@ -1,0 +1,25 @@
+<script>
+
+    let i = 0
+    let media = 0
+    /* i igual a indice, não posição */
+    let temperatura = []
+    let dias = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"]
+
+    for (i = 0; i < dias.length; i++) {
+        temperatura[i] = Number(prompt("Temperatura no(a) " + dias[i]))
+    }
+
+    for (i = 0; i < temperatura.length; i++) {
+        media = media + temperatura[i] 
+    }
+
+    media = media/7
+
+    for (i = 0; i < temperatura.length; i++) {
+        if (temperatura[i] > media) {
+            console.log("Os dias da semana que tiveram temperatura acima da média foram em " + dias[i] + " com temperaturas de " + temperatura[i] + " ºC")
+        }
+    }
+
+</script>

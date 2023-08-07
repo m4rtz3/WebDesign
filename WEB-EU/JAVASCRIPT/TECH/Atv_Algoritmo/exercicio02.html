@@ -1,0 +1,28 @@
+<script>
+    let x = Number(prompt("Escreva um número x"))
+
+    if (x == 2 || x == -2 || x == 0 || x != Number(x)) {
+        alert("A conta não pode ser realizada com o número fornecido, tente outro!");
+    } else {
+        let equacao1 = x / (Math.pow(x,2) - 4)
+        let equacao2 = (Math.pow(x,3) - 2) / 5
+        let equacao3
+
+        /* A questão do || entre o valor da variável quacao2 */
+        if (equacao2 < 0) {
+            equacao2 = equacao2 * -1
+            equacao3 = Math.sqrt(equacao2)
+        } else if (equacao2 == 0) {
+            equacao2 = 0
+            equacao3 = Math.sqrt(equacao2)
+        } else {
+            equacao2 = equacao2 * 1
+            equacao3 = Math.sqrt(equacao2)
+        }
+
+        let equacao4 = 1 / Math.pow(x,2)
+        let y = equacao1 + equacao3 + equacao4;
+        document.write("O resultado da equação é " + y + "." + " Aproximando, ficaria " + y.toFixed(2) + ".");
+    }
+
+</script>

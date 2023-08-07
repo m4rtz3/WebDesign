@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        section {
+            display: flex;
+            align-items: center;
+        }
+
+        div {
+            border: solid 2px black;
+            height: 300px;
+            width: 300px;
+            justify-content: center;
+        }
+
+    </style>
+
+    <title>Sistema de Média</title>
+</head>
+
+<body>
+    <section>
+        <div>
+            <h1>Nota 1</h1>
+            <p></p>
+        </div>
+        <div>
+            <h1>Nota 2</h1>
+            <p></p>
+        </div>
+        <div>
+            <h1>Resultado Final</h1>
+            <p></p>
+        </div>
+    </section>
+    <br>
+    <button onclick="verResultado()">
+        Veja o Resultado Final
+    </button>
+
+    <script>
+        
+        var notaNoUm = parseInt(prompt("Qual a sua primeira nota?"));
+        var notaNoDois = parseInt(prompt("Qual a sua segunda nota?"));
+
+        const caixaUm = document.getElementsByTagName("p")[0];
+        const caixaDois = document.getElementsByTagName("p")[1];
+        
+        caixaUm.innerText = notaNoUm;
+        caixaDois.innerText = notaNoDois;
+
+        function verResultado() {
+            let caixaTres = document.getElementsByTagName("p")[2];
+            var resultadoFinal = (notaNoUm + notaNoDois)/2;
+            caixaTres.innerText = resultadoFinal;
+
+            caixaUm.style.background = "blue";
+            caixaDois.style.background = "red";
+            caixaTres.style.background = "purple";
+        }
+
+    </script>
+    </script>
+
+</body>
+
+</html>

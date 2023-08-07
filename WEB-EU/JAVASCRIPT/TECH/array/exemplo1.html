@@ -1,0 +1,33 @@
+<script>
+
+
+
+
+/*     for (let i = 0; i < numero.length; i++) {
+        numero [i] = Number(prompt("Digite um número"))
+    }
+
+    maior = Math.max(...numero)
+    menor = Math.min(...numero)
+
+    console.log("MAIOR: " + maior + " e MENOR: " + menor) */
+
+    let numero = new Array (5)
+
+    let maior = 0
+    let menor = 0
+
+    for (let i = 0; i < numero.length; i++){
+        numero[i] = parseInt(prompt("valor"))
+        if(i == 0 || numero[i] > maior) {
+            maior = numero[i]
+        }
+        if(i == 0 || numero[i] < menor) {
+            menor = numero[i]
+        }
+    }
+
+    alert("maior = " + maior)
+    alert("menor = " + menor)
+
+</script>

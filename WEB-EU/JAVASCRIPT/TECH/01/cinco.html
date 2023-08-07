@@ -1,0 +1,40 @@
+<script>
+    /* entrada de dados */
+    let comprimento = Number(prompt("Qual o comprimento da superfície (em centímetros) da escravaninha que você deseja?"));
+    let largura = Number(prompt("Qual a largura da superfície (em centímetros) da escravaninha que você deseja?"));
+    let tpMadeira = (prompt("Qual o tipo de madeira que você deseja?")).toLowerCase();
+    let nmGavetas = Number(prompt("Quantas gavetas você deseja?"));
+
+    let area = comprimento * largura;
+    let orcamento;
+
+    switch (tpMadeira) {
+        case "mogno":
+            if (area > 1000) {
+                orcamento = 1200 + 200 + 200 + (nmGavetas * 50);
+                document.write("O orçamento total será de R$" + orcamento.toFixed(2) + ".")
+            } else {
+                orcamento = 1200 + 200 + (nmGavetas * 50);
+                document.write("O orçamento total será de R$" + orcamento.toFixed(2) + ".")
+            }
+            break
+        case "carvalho":
+            if (area > 1000) {
+                orcamento = 1200 + 200 + 300 + (nmGavetas * 50);
+                document.write("O orçamento total será de R$" + orcamento.toFixed(2) + ".")
+            } else {
+                orcamento = 1200 + 300 + (nmGavetas * 50);
+                document.write("O orçamento total será de R$" + orcamento.toFixed(2) + ".")
+            }
+            break
+        default:
+        if (area > 1000) {
+                orcamento = 1200 + 200 + (nmGavetas * 50);
+                document.write("O orçamento total será de R$" + orcamento.toFixed(2) + ".")
+            } else {
+                orcamento = 1200 + (nmGavetas * 50);
+                document.write("O orçamento total será de R$" + orcamento.toFixed(2) + ".")
+            }
+    }
+
+</script>

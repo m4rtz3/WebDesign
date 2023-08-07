@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospedagem e diárias</title>
+
+    <script>
+
+        let angUm = parseFloat(prompt("Digite o primeiro ângulo do triângulo"));
+        let angDois = parseFloat(prompt("Digite o segundo ângulo do triângulo"));
+        let angTres = parseFloat(prompt("Digite o terceiro ângulo do triângulo"));
+
+        if (angUm == angDois == angTres) {
+            alert("É um triângulo equilátero!")
+        } else if ((angUm == angDois) != angTres || angDois == angTres || angTres == angUm) {
+            alert("É um triângulo isósceles!")
+        } else {
+            alert("É um triângulo escaleno!")
+        }
+
+    </script>
+
+</head>
+
+<body>
+</body>
+
+</html>

@@ -1,0 +1,276 @@
+
+    body {
+        background-image: url(../imagens2/fundo.png);
+        background-repeat: repeat-x;
+    }
+
+    * {
+        padding: 0;
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    #container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    header {
+        padding: 2%;
+        color: aliceblue;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    header p {
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        font-weight: bold;
+        font-size: larger;
+        color: aliceblue;
+    }
+
+
+    nav {
+        color: aliceblue;
+        display: flex;
+        flex-direction: column;
+        justify-content: baseline;
+        align-items: flex-end;
+    }
+
+    ul {
+        list-style-type: none;
+        display: flex;
+    }
+
+    li {
+        margin: 0px 10px;
+        margin-top: 0;
+    }
+
+    nav a {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: 500;
+        font-size:small;
+        color: #f5fdff;
+        text-decoration: none;
+        padding: 8px 20px;
+    }
+
+    nav a:hover {
+        background-color: #f5fdff;
+        color: darkcyan;
+    }
+
+    main {
+        padding-left: 5%;
+        padding-bottom: 5%;
+        padding-right: 5%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    main .homem {
+
+        float: right;
+        max-width: 590px;
+        /* min-width: 35%;  só que em pixels*/
+    }
+
+    main
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0;
+    }
+
+    main h1 {
+        color: rgb(255, 255, 255);
+        font-size: 50px;
+        margin-top: 5%;
+        margin-bottom: 3%;
+    }
+
+    main p {
+        color: azure;
+        font-size: medium;
+    }
+
+    main section article {
+        margin-bottom: 5%;
+    }
+
+    div {
+        display: flex;
+    }
+
+    .um {
+        text-decoration: none;
+        background-color: rgb(255, 255, 255);
+        padding: 1%;
+        margin: 3% 0%;
+    }
+
+    .dois {
+        text-decoration: none;
+        background-color: rgba(255, 255, 255, 0);
+        padding: 1%;
+        margin: 3% 4%;
+    }
+
+    .dois p {
+        color: rgb(255, 255, 255);
+        font-weight:600;
+    }
+
+    .dois:hover {
+        text-shadow: 10px 10px 10px rgb(0, 117, 117);
+    }
+
+    .um p {
+        color: rgb(15, 155, 155);
+        font-weight:600;
+    }
+
+    .um:hover {
+        background-color:rgb(74, 161, 161);
+        box-shadow: 10px 10px 10px darkcyan;
+    }
+
+    .um:hover p{
+        color: rgb(255, 255, 255);
+    }
+
+    .cards {
+        display: flex;
+        margin-bottom: -50px;
+    }
+
+    .cards img {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 5%;
+    }
+
+    .cards section {
+        display: flex;
+        justify-content: baseline;
+        align-items: baseline;
+        flex-direction: column;
+        margin: 20px;
+    }
+
+    .cards a {
+        text-decoration: none;
+        background-color: #5E8EFF;
+        color: white;
+        margin: 10px;
+        padding: 9px;
+        margin-top: -3%;
+        width: 310px;
+        height: 360px;
+    }
+
+    .cards a:hover {
+        background-color: rgb(197, 237, 255);
+        color: black;
+    }
+
+    .cards a:hover h1 {
+        color: black;
+    }
+
+    .cards a:hover p {
+        color: black;
+    }
+
+    .cards h1 {
+        font-size: large;
+    }
+
+    .cards p {
+        font-size: medium;
+        margin-top: 3%;
+    }
+
+    .secundarioDiv {
+        padding: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .naoMain {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 1%;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+
+    .naoMain img {
+        width: 70%;
+        height: 70%;
+        border-radius: 1000px 1000px 0px 1000px;
+    }
+
+    .naoMain .secundario {
+        padding-left: 5%;
+        text-align: justify;
+    }
+
+    .naoMain .aboutUs {
+        font-weight: bolder;
+        font-size: larger;
+        color: rgb(255, 174, 0);
+        margin-bottom: 5%;
+    }
+
+    .naoMain h1 {
+        color: black;
+        font-size: 30px;
+        margin-bottom: 3%;
+    }
+
+    .naoMain p {
+        color: black;
+        text-align: left;
+        font-size: medium;
+        margin-bottom: 3%;
+    }
+
+    .naoMain div a {
+        text-decoration: none;
+        margin: 3%;
+        margin-left: 0%;
+        background-color: #00C1AB;
+        font-weight: lighter;
+        padding: 10px;
+        border-radius: 10px;
+        border: solid 2px #00C1AB;
+    }
+
+    .naoMain div a p {
+        font-size: 18px;
+        color: white;
+    }
+
+    .naoMain div a:hover {
+        background-color: white;
+    }
+
+    .naoMain div a:hover p {
+      color: #00C1AB;
+    }
+
+    footer {
+        padding: 2%;
+        font-weight: bold;
+        text-align: center;
+        color: white;
+        background-color: #7CABFD;
+    }

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma e Média</title>
+
+    <script>
+
+        // Entrada das variáveis
+        let valor = Number(prompt("Qual é o valor da prestação em atraso?"));
+        let taxa = Number(prompt("Qual é a taxa de porcentagem que é aplicada sobre o valor atrasado?"));
+        let tempo = Number(prompt("Qual é a quantidade de dias que o valor está atrasado?"))
+
+        // Processamento
+        prestacao = valor + (valor * (taxa/100) * tempo);
+
+        document.write("A prestação vale " + prestacao.toFixed(2) + ".");
+
+    </script>
+
+</head>
+
+<body>
+</body>
+
+</html>

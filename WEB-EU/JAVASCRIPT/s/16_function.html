@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Functions</title>
+</head>
+
+<body>
+    <h1>Functions</h1>
+
+    <table border>
+
+        <tr>
+            <th>Valor 1</th>
+            <th>Valor 2</th>
+            <th>Resultado</th>
+        </tr>
+
+        <tr>
+            <td class="valores">20</td>
+            <td class="valores">10</td>
+            <td class="valores" ondblclick="limparTd ()"></td>
+        </tr>
+
+    </table>
+
+    <button id="btnSomar">
+        Somar
+    </button>
+
+    <button id="btnSubtrair">
+        Subtrair
+    </button>
+
+    <button id="btnDividir">
+        Dividir
+    </button>
+
+    <button id="btnMultiplicar">
+        Multiplicar
+    </button>
+
+    <script>
+        let valor1 = parseInt(document.getElementsByClassName("valores")[0].innerText);
+        let valor2 = parseInt(document.getElementsByClassName("valores")[1].innerText);
+        let tdResultado = document.getElementsByClassName("valores")[2];
+
+        let btnSomar = document.getElementById("btnSomar");
+        btnSomar.addEventListener("click", somar);
+
+        let btnSubtrair = document.getElementById("btnSubtrair");
+        btnSubtrair.addEventListener("click", subtrair);
+
+        let btnDividir = document.getElementById("btnDividir");
+        btnDividir.addEventListener("click", dividir);
+
+        let btnMultiplicar = document.getElementById("btnMultiplicar");
+        btnMultiplicar.addEventListener("click", multiplicar);
+
+        let resultado;
+        tdResultado.innerText = somar(valor1, valor2);
+
+        function somar(valor1, valor2) {
+            resultado = valor1 + valor2;
+            return resultado;
+        }
+
+        function subtrair() {
+            let resultado = valor1 - valor2;
+            tdResultado.innerText = resultado;
+        }
+
+        function dividir() {
+            let resultado = valor1 / valor2;
+            tdResultado.innerText = resultado;
+        }
+
+        function multiplicar() {
+            let resultado = valor1 * valor2;
+            tdResultado.innerText = resultado;
+        }
+
+        tdResultado.innerText = resultado;
+
+        function limparTd () {
+            tdResultado.innerText = "";
+        }
+        
+    </script>
+
+</body>
+
+</html>

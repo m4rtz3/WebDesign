@@ -1,0 +1,23 @@
+<script>
+
+let nmrProd = prompt("São quantos produtos a serem analisados?")
+let produtos = []
+let conta = 0
+
+    for (i = 0; i < nmrProd; i++) {
+        produtos.push(prompt("Qual o nome do produto " + (i + 1) + "?").toUpperCase())
+        console.log("Produto: " + produtos[i])
+
+        let anoPass = parseFloat(prompt("Qual era o valor comercializado ano passado?"))
+        console.log("Ano Passado: R$" + anoPass)
+        
+        let anoAtu = parseFloat(prompt("Qual é o valor comercializado nesse ano?"))
+        console.log("Ano Atual: R$" + anoAtu)
+        
+        conta = ((anoPass * 1)/anoAtu) * 100
+        conta = 100 - conta
+        console.log("Aumentou " + conta + "% no produto " + produtos[i])
+        console.log(" ")
+    }
+
+</script>

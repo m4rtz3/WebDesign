@@ -1,0 +1,46 @@
+<script>
+
+    let dias = 10 // x
+    let consuPdia = [] //y
+
+    let cont = 0
+    while (cont < dias) {
+        consuPdia.push(parseFloat(prompt("Quanto foi o consumo no dia " + (cont + 1) + "?")))
+        console.log(consuPdia[cont])
+        cont++
+    }
+
+    //soma x
+    let somaDias = 0
+
+    //soma y
+    let somaConsu = 0
+
+    for (let i = 0; i < dias; i++) {
+        somaDias += (i + 1)
+        somaConsu += consuPdia[i]
+    }
+
+    //media x
+    let mediaDias = somaDias/dias
+
+    //media y
+    let mediaConsumo = somaConsu/consuPdia.length
+
+    let numerador = 0
+    let denominador = 0
+
+    //m
+    for (let j = 0; j < dias; j++) {
+        numerador = numerador + ((j - mediaDias) * (consuPdia[j] - mediaConsumo))
+        denominador = denominador + Math.pow((j - mediaDias), 2)
+    }
+
+    let m = numerador/denominador // coeficiente angular
+    let b = mediaConsumo - (m * mediaDias) // c. linear
+
+    let previsao = b + (m * (dias + 1))
+
+    document.write("A previsão do consumo para o 11º dia é de " + previsao.toFixed(0) + " de consumo de água!")
+
+</script>

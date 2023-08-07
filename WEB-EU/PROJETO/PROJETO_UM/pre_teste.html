@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #container {
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            width: 90%;
+        }
+
+        .topo {
+            display: flex;
+            background-color: rgb(68, 130, 245);
+            justify-content: space-between;
+            border-radius: 10px 10px 0px 0px;
+        }
+
+        .logo {
+            width: 10%;
+            height: 10%;
+        }
+
+        .menu {
+            width: 90%;
+            border-radius: 0px 10px 0px 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: baseline;
+            align-items: flex-end;
+        }
+
+        ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: end;
+        }
+
+        li {
+            margin: 20px 0px;
+            margin-top: 0;
+            display: flex;
+        }
+
+        a {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: medium;
+            color: rgb(236, 234, 255);
+            text-decoration: none;
+            background-color: rgb(255, 221, 128);
+            padding: 8px 90px;
+        }
+
+        .inicio {
+            border-radius: 0px 0px 0px 10px;
+        }
+
+        .fim {
+            border-radius: 0px 10px 0px 0px;
+        }
+
+        a:hover {
+            color: rgb(13, 63, 156);
+            background-color: rgb(160, 193, 255);
+            border: solid 2px rgb(13, 63, 156);
+        }
+
+        .principal {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            height: 100%;
+            background-color: rgb(77, 139, 255);
+        }
+
+        .foto {
+            width: 35%;
+            height: 35%;
+            margin: 25px;
+        }
+
+        .texto {
+            background-color: rgb(160, 193, 255);
+            width: 40%;
+            height: 40%;
+            margin: 5%;
+            border-radius: 5px;
+            box-shadow: 10px 10px 10px rgb(0, 98, 255);
+        }
+
+        .article {
+            margin: 25px;
+            text-align: justify;
+            font-size: larger;
+            color: rgb(11, 54, 134);
+        }
+
+        footer {
+            background-color: rgb(255, 187, 0);
+            color: rgb(124, 65, 10);
+            display: flex;
+            justify-content: space-between;
+            border-radius: 0px 0px 10px 10px;
+            padding: 5px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+    </style>
+
+    <title>Exercicio</title>
+</head>
+
+<body>
+    <div id="container">
+
+        <div class="topo">
+            <img src="imagens2/logo_lapis_web.gif" alt="" class="logo">
+
+            <div class="menu">
+                <ul>
+                    <li>
+                        <a href="#" class="inicio">Início</a>
+                    </li>
+                    <li>
+                        <a href="#">Divulgação</a>
+                    </li>
+                    <li>
+                        <a href="#">Campanhas</a>
+                    </li>
+                    <li>
+                        <a href="#" class="fim">Contato</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="principal">
+            <img src="imagens2/fc4.png" alt="" class="foto">
+
+            <div class="texto">
+                <p class="article">Lorem ipsum dolor sit amet consectetur adipisicing elit. Et ut veritatis odit magnam
+                    qui
+                    harum eum neque,
+                    porro, nam officia saepe recusandae laboriosam architecto eaque. Accusamus debitis dolor nemo esse.
+                </p>
+                <p class="article">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut illo quibusdam esse,
+                    placeat debitis
+                    ducimus illum veniam quas quae consequatur consectetur minima ullam. Tenetur, modi quos cupiditate
+                    eligendi voluptatem quis.</p>
+                <p class="article">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Delectus assumenda
+                    inventore aliquid veritatis
+                    magnam est reprehenderit fugit sapiente consectetur nam, repellat accusamus quos id eum molestiae
+                    velit,
+                    maiores atque praesentium.</p>
+            </div>
+
+        </div>
+
+        <footer>
+            <p>Email:</p>
+            <p>Nome</p>
+        </footer>
+
+    </div>
+</body>
+
+</html>

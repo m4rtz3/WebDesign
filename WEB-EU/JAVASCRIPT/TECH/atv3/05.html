@@ -1,0 +1,70 @@
+<script>
+    let trafego = []
+    let opcoes = ""
+
+    let trafegoDadosTotal = 0
+    let mediaDadosTrafego = 0
+
+    let horaPico = 0
+    let numeroMax = 0
+
+    while (opcoes !== 4) {
+
+        let opcoes = parseInt(prompt("Escolha uma opção: \n \n 1. Inserir dados de tráfego; \n 2. Calcular a média de tráfego; \n 3. Identificar horário de pico; \n 4. Sair"))
+
+        switch (opcoes) {
+            case 1:
+                if (trafego.length === 24) {
+                    alert("Você já inseriu os dados de tráfego para todas as horas do dia!")
+                } else {
+                    trafego.push(parseFloat(prompt("Insira o volume de carros atual")))
+                }
+                console.log(trafego)
+                break
+            case 2:
+                if (trafego.length === 0) {
+                    alert("Nenhum dado de tráfego foi inserido ainda.")
+                } else {
+
+                    trafegoDadosTotal = 0
+                    mediaDadosTrafego = 0
+
+                    for (let i = 0; i < trafego.length; i++) {
+                        trafegoDadosTotal += trafego[i]
+                    }
+                    mediaDadosTrafego = trafegoDadosTotal / trafego.length
+                    alert("A média do tráfego dos dados que temos até agora é de " + mediaDadosTrafego + ".")
+                }
+                console.log(mediaDadosTrafego)
+                break
+            case 3:
+                if (trafego.length === 0) {
+                    alert("Nenhum dado de tráfego foi inserido ainda.")
+                } else {
+
+                    horaPico = 0
+                    numeroMax = 0
+
+                    for (let i = 0; i < trafego.length; i++) {
+                        if (trafego[i] > numeroMax && trafego[i] > mediaDadosTrafego) {
+                            numeroMax = trafego[i]
+                            horaPico = i + 1
+                        }
+                    }
+                console.log(horaPico)
+                }
+                alert("A hora de pico é: " + horaPico + "h")
+                break
+            case 4:
+                alert("Você escolheu 4. Sair")
+                break
+            default:
+                alert("Opção inválida. Tente novamente.")
+                break
+        }
+
+        if (opcoes === 4) {
+            break
+        }
+    }
+</script>

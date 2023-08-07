@@ -1,0 +1,26 @@
+<script>
+    let salario = Number(prompt("Digite o valor do seu salário"))
+    let salarioAj, salarioNovo
+
+    if (0 < salario && salario <= 400) {
+        salarioAj = salario * (15 / 100)
+        salarioNovo = salario + salarioAj
+    } else if (400 < salario && salario <= 800) {
+        salarioAj = salario * (12 / 100)
+        salarioNovo = salario + salarioAj
+    } else if (800 < salario && salario <= 1200) {
+        salarioAj = salario * (10 / 100)
+        salarioNovo = salario + salarioAj
+    } else if (1200 < salario && salario <= 2000) {
+        salarioAj = salario * (7 / 100)
+        salarioNovo = salario + salarioAj
+    } else if (salario > 2000){
+        salarioAj = salario * (4 / 100)
+        salarioNovo = salario + salarioAj
+    } else {
+        document.write("Foi digitado o valor de 0 no seu salário, logo, permanecerá sendo 0.")
+    }
+
+    document.write("O reajuste do seu salário será de R$" + salarioAj + ". Assim, seu salário será agora de R$" + salarioNovo + ".")
+
+</script>

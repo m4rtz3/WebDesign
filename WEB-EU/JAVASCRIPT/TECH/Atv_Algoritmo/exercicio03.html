@@ -1,0 +1,28 @@
+<script>
+    let x = (parseFloat(prompt("Digite o valor da coordenada X em casa decimal!"))).toFixed(1)
+    let y = (parseFloat(prompt("Digite o valor da coordenada Y em casa decimal!"))).toFixed(1)
+
+    if (x != 0 && y == 0) {
+        /* CASO ESTIVER NO EIXO X */
+        document.write("O ponto está no EIXO X.")
+    } else if (y != 0 && x == 0) {
+        /* CASO ESTIVER NO EIXO Y */
+        document.write("O ponto está no EIXO Y.")
+    } else if (x > 0 && y > 0) {
+        /* CASO ESTIVER NO PRIMEIRO QUADRANTE */
+        document.write("O ponto está no PRIMEIRO QUADRANTE.")
+    } else if (x < 0 && y > 0) {
+        /* CASO ESTIVER NO SEGUNDO QUADRANTE */
+        document.write("O ponto está no SEGUNDO QUADRANTE.")
+    } else if (x < 0 && y < 0) {
+        /* CASO ESTIVER NO TERCEIRO QUADRANTE */
+        document.write("O ponto está no TERCEIRO QUADRANTE.")
+    } else if (x > 0 && y < 0) {
+        /* CASO ESTIVER NO QUARTO QUADRANTE */
+        document.write("O ponto está no QUARTO QUADRANTE.")
+    } else {
+        /* CASO ESTIVER NA ORIGEM */
+        document.write("O ponto está na ORIGEM.")
+    }
+
+</script>

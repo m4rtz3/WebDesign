@@ -1,0 +1,26 @@
+<script>
+
+    let nmr = parseInt(prompt("Quantos números devem ser gerados aleatoriamente?"))
+    let aleatorios = []
+
+    for (let i = 0; i < nmr; i++) {
+        aleatorios.push(Number(Math.trunc(Math.random() * 10)))
+    }
+    document.write("<p>Números aleatórios: " + aleatorios + "</p>")
+
+    let auxIdentico = 1
+    let novo = []
+
+    for (let i = 0; i < aleatorios.length; i++) {
+        for (let j = 0; j < i; j++) {
+            if (aleatorios[i] === aleatorios[j]) {
+                auxIdentico++
+            }
+        }
+        document.write("<p>" + aleatorios[i] + " ocorre " + auxIdentico + " vez(es) </p>")
+        auxIdentico = 1
+    }
+
+
+
+</script>

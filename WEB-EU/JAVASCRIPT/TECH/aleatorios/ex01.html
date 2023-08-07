@@ -1,0 +1,21 @@
+<script>
+
+    let v = [32, 33, 34, 35, 36, 37, 38, 39]
+    let aux, max = 0
+
+    for(let i = 0; i < v.length; i++) {
+        if (v[i] > max) {
+            max = v[i]
+        }
+    }
+
+    for(let i = 7; i >= 4; i--) {
+        aux = v[i]
+        v[i] = v[7 - i]
+        v[7 - i] = [aux]
+    }
+    v[2] = v[0]
+    v[max - v[2]] = v[max - v[1]]
+    alert(v)
+
+</script>

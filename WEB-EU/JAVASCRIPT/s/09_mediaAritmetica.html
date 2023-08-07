@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Aritmética</title>
+
+    <script>
+
+        // Entrada
+        const notaUm = parseFloat(prompt("Qual foi a sua nota no primeiro bimestre?"));
+        const notaDois = parseFloat(prompt("Qual foi a sua nota no segundo bimestre?"));
+        const notaTres = parseFloat(prompt("Qual foi a sua nota no terceiro bimestre?"));
+        const notaQuatro = parseFloat(prompt("Qual foi a sua nota no quarto bimestre?"));
+        // Processamento
+        const media = (notaUm + notaDois + notaTres + notaQuatro) / 4;
+        const situacao = media >= 50 ? "Aprovado, parabéns" : "Reprovado, continue estudando";
+
+        // Saída/Exibição (Concatenar Dados)
+        // alert("A sua média esse ano é " + media);
+        // Concatenar com Template String (shift+crase duas vezes)
+        alert(`A sua média esse ano é ${media}.`);
+        alert(`Você foi ${situacao}`);
+
+        // Lembrete: \n = <br> do html
+
+    </script>
+
+    <style>
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+            color: darkblue;
+        }
+
+        a:link {
+            color: darkblue;
+        }
+        
+    </style>
+
+</head>
+
+<body>
+    <a href="09_mediaAritmetica.html"><h1>Média Final</h1></a>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array</title>
+</head>
+
+<body>
+    <h1>Array</h1>
+
+    <script>
+
+        // let cor1 = "azul";
+        // let cor2 = "preto";
+        // let cor3 = "violeta";
+        // let cor4 = "lilás";
+        // let cor5 = "amarelo";
+
+        // array cria lista de valores dentro do mesmo espaço na memória do computador. os itens sempre serão limitados utilizando cochetes []
+
+        let cores = ["azul", "preto", "violeta", "lilás", "amarelo"];
+
+        let paises = ["Brasil", "Inglaterra", "Holanda"];
+
+        cores.push("branco");
+        // push adiciona no final
+
+        paises.pop("Holanda");
+        // pop remove um item do final, da lista
+
+        cores.unshift("roxo");
+        // unshift insere um novo item no inicio do array
+
+        paises.shift("Brasil");
+        // shift remove o primeiro item da lista
+
+        // identificador .length exibe a quantidade de valores armazenadas no array
+
+        alert(paises.indexOf("Inglaterra"));
+        // descobre a posição do item dentro do array
+
+        // cores.push("lavanda");
+        // alert (cores[cores.length - 1]);
+
+    </script>
+
+</body>
+
+</html>

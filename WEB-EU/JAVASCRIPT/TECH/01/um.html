@@ -1,0 +1,68 @@
+<script>
+
+    let a = Number(prompt("Digite o primeiro lado do triângulo"));
+    let b = Number(prompt("Digite o segundo lado do triângulo"));
+    let c = Number(prompt("Digite o terceiro lado do triângulo"));
+
+    let novoA, novoB, novoC;
+
+    if (a < b + c && b < a + c && c < b + a) {
+        /* logo, é um triângulo, prosseguiremos com o exercício */
+
+        /* agora deve-se averiguar que o lado a é o maior que os outros dois lados */
+        if ((a < b && b < c) || (b < a && a < c)) {
+            novoA = c;
+            novoC = a;
+            /* alert(novoA + ", " + b + ", " + novoC); */
+
+            /* criterios de classificacao */
+            if (Math.pow(novoA, 2) == Math.pow(b, 2) + Math.pow(novoC, 2)) {
+                alert("É um triângulo retângulo!");
+                document.write("É um triângulo retângulo!");
+            } else if (Math.pow(novoA, 2) < Math.pow(b, 2) + Math.pow(novoC, 2)) {
+                alert("É um triângulo acutângulo!");
+                document.write("É um triângulo acutângulo!");
+            } else {
+                alert("É um triângulo obtusângulo!");
+                document.write("É um triângulo obtusângulo!");
+            }
+
+        } else if ((a < c && c < b) || (c < a && a < b)) {
+            novoA = b;
+            novoB = a;
+            alert(novoA + ", " + novoB + ", " + c);
+
+            /* criterios de classificacao */
+            if (Math.pow(novoA, 2) == Math.pow(novoB, 2) + Math.pow(c, 2)) {
+                alert("É um triângulo retângulo!");
+                document.write("É um triângulo retângulo!");
+            } else if (Math.pow(novoA, 2) < Math.pow(novoB, 2) + Math.pow(c, 2)) {
+                alert("É um triângulo acutângulo!");
+                document.write("É um triângulo acutângulo!");
+            } else {
+                alert("É um triângulo obtusângulo!");
+                document.write("É um triângulo obtusângulo!");
+            }
+
+        } else {
+            /* alert(a + ", " + b + ", " + c */
+            
+            /* criterios de classificacao */
+            if (Math.pow(a, 2) == Math.pow(b, 2) + Math.pow(c, 2)) {
+                alert("É um triângulo retângulo!");
+                document.write("É um triângulo retângulo!");
+            } else if (Math.pow(a, 2) < Math.pow(b, 2) + Math.pow(c, 2)) {
+                alert("É um triângulo acutângulo!");
+                document.write("É um triângulo acutângulo!");
+            } else {
+                alert("É um triângulo obtusângulo!");
+                document.write("É um triângulo obtusângulo!");
+            }
+
+        }
+
+    } else {
+        document.write("Os lados informados não formam um triângulo.")
+    }
+
+</script>

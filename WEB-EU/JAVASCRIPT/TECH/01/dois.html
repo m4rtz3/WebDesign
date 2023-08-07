@@ -1,0 +1,33 @@
+<script>
+    /* entrada da variável */
+    let x = Number(prompt("Digite um número x"));
+
+    /* processamento */
+
+    if (x == 2) {
+        alert("A conta não pode ser realizada com o número fornecido, tente outro!");
+    } else {
+        let equacao1 = x / (Math.pow(x, 2) - 4);
+        let equacao2 = (Math.pow(x, 3) - 2) / 5;
+        let equacao3;
+
+        /* condicoes de || da terceira equação */
+        if (equacao2 > 0) {
+            equacao3 = Math.sqrt(equacao2);
+        } else if (equacao2 == 0) {
+            /* logo, equacao3 será igual a zero, raiz quadrada de zero é zero */
+            equacao3 = 0;
+        } else {
+            let equacao23 = equacao2 * -1;
+            equacao3 = Math.sqrt(equacao23)
+        }
+
+        let equacao4 = 1 / Math.pow(x, 2);
+        let y = equacao1 + equacao3 + equacao4;
+
+        /* saída */
+        alert("O resultado é " + y);
+        document.write("O resultado é " + y);
+    }
+
+</script>

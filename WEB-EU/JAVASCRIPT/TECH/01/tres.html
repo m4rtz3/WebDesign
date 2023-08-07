@@ -1,0 +1,28 @@
+<script>
+    let x = Number(prompt("Digite o x da coordenada de um ponto"));
+    let y = Number(prompt("Digite o y da coordenada desse mesmo ponto"));
+
+    if (x > 0 && y > 0) {
+        alert("O ponto de coordenada (" + x + ", " + y + ") está no Primeiro Quadrante");
+        document.write("O ponto de coordenada (" + x + ", " + y + ") está no Primeiro Quadrante");
+    } else if (x < 0 && y > 0) {
+        alert("O ponto de coordenada (" + x + ", " + y + ") está no Segundo Quadrante");
+        document.write("O ponto de coordenada (" + x + ", " + y + ") está no Segundo Quadrante");
+    } else if (x < 0 && y < 0) {
+        alert("O ponto de coordenada (" + x + ", " + y + ") está no Terceiro Quadrante");
+        document.write("O ponto de coordenada (" + x + ", " + y + ") está no Terceiro Quadrante");
+    } else if (x > 0 && y < 0) {
+        alert("O ponto de coordenada (" + x + ", " + y + ") está no Quarto Quadrante");
+        document.write("O ponto de coordenada (" + x + ", " + y + ") está no Quarto Quadrante");
+    } else if (x == 0 && y != 0) {
+        alert("O ponto de coordenada (" + x + ", " + y + ") está no Eixo Y");
+        document.write("O ponto de coordenada (" + x + ", " + y + ") está no Eixo Y");
+    } else if (y == 0 && x != 0) {
+        alert("O ponto de coordenada (" + x + ", " + y + ") está no Eixo X");
+        document.write("O ponto de coordenada (" + x + ", " + y + ") está no Eixo X");
+    } else {
+        alert("O ponto de coordenada (" + x + ", " + y + ") está na Origem");
+        document.write("O ponto de coordenada (" + x + ", " + y + ") está na Origem X");
+    }
+
+</script>

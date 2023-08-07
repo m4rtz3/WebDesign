@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos no JS</title>
+
+    <style>
+        section {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            height: 300px;
+            border: 3px solid gray;
+        }
+
+        h1 {
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        p {
+            text-align: center;
+            font-weight: 700;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Eventos</h1>
+
+    <section>
+        <div id="caixaUm">
+            <button id="btn1" ondblclick="limparVer ()">
+                Clique em mim!
+            </button>
+        </div>
+
+        <div id="caixaDois">
+            <button id="btn2" ondblclick="limparAz ()">
+                Clique em mim!
+            </button>
+        </div>
+
+        <div id="caixaTres">
+            <button id="btn3" ondblclick="limparVerd ()">
+                Clique em mim!
+            </button>
+        </div>
+    </section>
+
+    <p id="pLimpar">Limpar Caixas</p>
+
+    <script>
+
+        let btn1 = document.getElementById("btn1");
+        let btn2 = document.getElementById("btn2");
+        let btn3 = document.getElementById("btn3");
+
+        btn1.addEventListener("click", vermelho);
+        btn2.addEventListener("click", azul);
+        btn3.addEventListener("click", verde);
+
+        function vermelho() {
+            var caixaUm = document.getElementById("caixaUm");
+            caixaUm.style.background = "red";
+        }
+
+        function azul() {
+            var caixaDois = document.getElementById("caixaDois");
+            caixaDois.style.background = "blue";
+        }
+
+        function verde() {
+            var caixaTres = document.getElementById("caixaTres");
+            caixaTres.style.background = "green";
+        }
+
+        function limparVer() {
+            var caixaUm = document.getElementById("caixaUm");
+            caixaUm.style.background = "white";
+        }
+
+        function limparAz() {
+            var caixaDois = document.getElementById("caixaDois");
+            caixaDois.style.background = "white";
+        }
+
+        function limparVerd() {
+            var caixaTres = document.getElementById("caixaTres");
+            caixaTres.style.background = "white";
+        }
+
+        let pLimpa = document.getElementById("pLimpar");
+        pLimpa.addEventListener("click", limpar);
+
+        function limpar() {
+            var caixaUm = document.getElementById("caixaUm");
+            var caixaDois = document.getElementById("caixaDois");
+            var caixaTres = document.getElementById("caixaTres");
+
+            caixaUm.style.background = "white";
+            caixaDois.style.background = "white";
+            caixaTres.style.background = "white";
+        }
+
+    </script>
+
+</body>
+
+</html>

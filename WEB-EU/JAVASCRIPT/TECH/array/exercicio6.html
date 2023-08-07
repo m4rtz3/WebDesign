@@ -1,0 +1,48 @@
+<script>
+
+    let salas = []
+    let nmrSalas = parseInt(prompt("São quantas salas de aula?"))
+    salas.push(nmrSalas)
+
+    let alunos = []
+    let notas = []
+
+    for (let i = 1; i <= nmrSalas; i++) {
+        let nmrAlunos = parseInt(prompt("Digite o número de alunos da sala " + i + ":"))
+        alunos.push(nmrAlunos)
+        console.log(alunos)
+        for (let j = 0; j < nmrAlunos; j++) {
+            let nota = parseInt(prompt("Digite a nota do aluno " + (j + 1) + " da sala " + i + ":"))
+            notas.push(nota)
+            console.log(notas)
+        }
+
+        let somaNotas = 0
+
+        for (let k = 0; k < notas.length; k++) {
+            somaNotas += notas[k]
+        }
+
+        let mediaSala = somaNotas / nmrAlunos
+        let somaFinalSala = 0
+        let alunosAcima = 0
+
+        for (let cont = 0; cont < notas.length; cont++) {
+            if (notas[cont] > mediaSala) {
+                alunosAcima++
+            }
+        }
+
+        let porcentagem = (100 * alunosAcima) / (nmrAlunos)
+        
+        console.log("Sala " + i + " com o total de alunos de " + nmrAlunos + " alunos.")
+        console.log("Médias: " + notas)
+        console.log("Porcentagem: " + porcentagem.toFixed(3) + "%")
+
+        for (let cont2 = 0; cont2 <= nmrAlunos; cont2++){
+            alunos.pop(cont2)
+            notas.pop(cont2)
+        }
+    }
+
+</script>

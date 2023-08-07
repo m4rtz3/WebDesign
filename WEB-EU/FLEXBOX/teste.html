@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            margin-top: 10vh;
+        }
+
+        nav div {
+            display: flex;
+        }
+
+        nav div p {
+            margin: 5%;
+        }
+
+        .imagemUm {
+            display: none;
+            position: fixed;
+        }
+        
+        .imagemDois {
+            display: none;
+            position: fixed;
+        }
+
+        .mostrar {
+            display: block;
+        }
+    </style>
+
+    <title>PopOut</title>
+
+</head>
+
+<body>
+
+    <nav>
+        <div>
+            <p class="um">Clique aqui!</p>
+            <br>
+            <div class="imagemUm">
+                <img src="imagens2/fc1.png" alt="">
+            </div>
+
+            <p class="dois">Ou aqui!</p>
+            <br>
+            <div class="imagemDois">
+                <img src="imagens2/fc3.png" alt="">
+            </div>
+
+        </div>
+
+
+    </nav>
+
+    <script>
+        let um = document.getElementsByClassName("um")[0];
+        let imagemUm = document.getElementsByClassName("imagemUm")[0];
+
+        let imagemDois = document.getElementsByClassName("imagemDois")[0];
+
+        um.addEventListener("mouseover", mostrar);
+        um.addEventListener("mouseout", esconder);
+
+        function mostrar(imagemDois) {
+            imagemUm.classList.add("mostrar");
+        }
+
+        function esconder(imagemDois) {
+            imagemUm.classList.remove("mostrar");
+        }
+    </script>
+
+</body>
+
+</html>

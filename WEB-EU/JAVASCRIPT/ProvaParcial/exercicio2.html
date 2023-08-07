@@ -1,0 +1,33 @@
+<script>
+    let hInicial = parseInt(prompt("Digite a hora inicial da produção"))
+    let mInicial = parseInt(prompt("Digite os minutos inicial da produção"))
+    let hFinal = parseInt(prompt("Digite a hora final da produção"))
+    let mFinal = parseInt(prompt("Digite o minuto final da produção"))
+
+    if (hInicial != Number(hInicial) || mInicial != Number(mInicial) || hFinal != Number(hFinal) || mFinal != Number(mFinal)) {
+        document.write("Não foi possível realizar a operação, pois você transcreveu o número, tente novamente")
+    } else if (hInicial > hFinal) {
+        document.write("Não foi possível realizar a operação, pois não é possível que o horário de ínicio seja maior que o final no mesmo dia, dentro de 24 horas!")
+    }
+    else {
+
+        hInicial = hInicial * 60
+        hFinal = hFinal * 60
+
+        hTotalInicial = hInicial + mInicial
+        hTotalFinal = hFinal + mFinal
+
+        let tmpProd = hTotalFinal - hTotalInicial
+        tmpProdCon = Math.trunc(tmpProd / 60)
+        tmpMinuto = (tmpProd % 60)
+
+        if (tmpProdCon == 0) {
+            document.write("O tempo de produção foi de " + tmpMinuto + " minutos.")
+        } else if (tmpProdCon == 1) {
+            document.write("O tempo de produção foi de " + tmpProdCon + " hora e " + tmpMinuto + " minutos.")
+        } else {
+            document.write("O tempo de produção foi de " + tmpProdCon + " horas e " + tmpMinuto + " minutos.")
+        }
+    }
+
+</script>

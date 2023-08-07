@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Imagem ao passar o mouse</title>
+
+    <style>
+        /* Reset CSS */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilizando a página */
+        html {
+            height: 90vh;
+            display: flex;
+            justify-content: center;
+            margin-top: 10vh;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .menu {
+            width: 100vw;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        li {
+            cursor: pointer;
+        }
+
+        main {
+            margin: 50px 100px
+        }
+
+        .imagem1 {
+            /* Faz com que o elemento não seja exibido ao carregar a página */
+            display: none;
+
+            /* 
+                O position absolute não é obrigatório, ele faz com que o elemento apareça em uma camada por cima do site
+                Caso o position absolute seja removido a imagem irá aparecer entre o menu e o conteúdo do site 
+            */
+            position: absolute;
+
+            /* Define o posicionamento da imagem em relação aos cantos do navegador (top, left, right, bottom)  */
+
+            /* Unidade vw representa 25 partes de 100 totais da largura da página, algo parecido com % */
+            left: 25vw;
+            /* Unidade vw representa 20 partes de 100 totais da altura da página, algo parecido com % */
+            bottom: 20vw;
+        }
+
+        /* Classe que será adicionada no JS que irá exibir a imagem */
+        .mostrar {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul class="menu">
+            <li class="menu1">Home</li>
+            <li>Sobre</li>
+            <li>Blog</li>
+            <li>Contato</li>
+        </ul>
+
+        <div class="imagem1">
+            <img src="https://source.unsplash.com/random/700x350?sig=1">
+        </div>
+    </nav>
+
+    <main>
+        <h1>Conteúdo Principal do Site</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut voluptatum enim numquam eligendi quasi corporis sit, praesentium veritatis assumenda ullam quos fuga quae aspernatur perferendis optio consequuntur voluptatem cum omnis!</p>
+    </main>
+
+    <script>
+        let menu1 = document.getElementsByClassName("menu1")[0];
+        let imagem1 = document.getElementsByClassName("imagem1")[0];
+        
+        menu1.addEventListener("mouseover", mostrar);
+        menu1.addEventListener("mouseout", esconder);
+        
+        function mostrar() {
+            // Adiciona uma classe no elemento imagem1
+            imagem1.classList.add("mostrar");
+        }
+
+        function esconder() {
+            // Remove uma classe no elemento imagem1
+            imagem1.classList.remove("mostrar");
+        }
+
+        /*  
+            Utilizando em vários elementos - Nesse caso o Event Listener não ajudaria muito
+            É possível fazer para várias imagens e menus utilizando outra lógica para ter somente uma função
+            basta passar o elemento imagem1 como argumento na chamada da função, ele irá adicionar a classe 
+            mostrar no elemento que receber. 
+
+        */
+
+    </script>
+</body>
+
+</html>

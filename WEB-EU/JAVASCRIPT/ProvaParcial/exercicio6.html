@@ -1,0 +1,13 @@
+<script>
+    let pao = parseInt(prompt("Quantos pães foram vendidos hoje?"))
+    let broa = parseInt(prompt("Quantas broas foram vendidas hoje?"))
+
+    let totalP = pao * 0.12
+    let totalB = broa * 1.5
+
+    let totalArr = totalP + totalB
+    let poupanca = (10/100) * totalArr
+
+    alert("Hoje, o total arrecadado foi de R$ " + totalArr.toFixed(2) + " , enquanto de poupança será de R$ " + poupanca.toFixed(2) + ".")
+
+</script>

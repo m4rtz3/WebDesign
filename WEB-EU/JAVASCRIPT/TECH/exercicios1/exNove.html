@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valores</title>
+
+    <script>
+
+        // Entrada das variáveis
+        let algorismoX = Number(prompt("Digite um número de três digitos"));
+
+        let centena = Math.trunc(algorismoX/100);
+        let operacao1 = algorismoX - (centena*100);
+
+        let dezena = Math.trunc(operacao1/10);
+        let unidade = operacao1 - (dezena*10);
+
+        let algorismoY = (unidade*100)+(dezena*10)+centena;
+
+        // Saída dessas variáveis
+        document.write(algorismoY);
+
+    </script>
+
+</head>
+
+<body>
+</body>
+
+</html>

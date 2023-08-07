@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 2</title>
+
+</head>
+
+<body>
+    <script>
+
+        // Entrada
+        let alturaLata = parseFloat(prompt("Digite a altura da lata:"));
+        let raioLata = parseFloat(prompt("Digite o raio da lata:"));
+
+        let areaLata =  Math.trunc((2 * Math.PI * raioLata) * (alturaLata + raioLata));
+        let quantidadeLata =  Math.trunc(areaLata / (5 * 3));
+        let custoLatas =  Math.trunc(quantidadeLata * 220);
+
+        alert("A quantidade de latas de tinta é de " + quantidadeLata + " para printar uma área de " + areaLata + "m². <br> Com o custo sendo de " + custoLatas);
+        document.write("A quantidade de latas de tinta é de " + quantidadeLata + "para printar uma área de " + areaLata + "m². <br> Com o custo sendo de " + custoLatas);
+        window.print();
+
+    </script>
+</body>
+
+</html>

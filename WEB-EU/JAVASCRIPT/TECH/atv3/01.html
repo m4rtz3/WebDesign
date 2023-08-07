@@ -1,0 +1,48 @@
+<script>
+
+    //aqui, é recolher a quantidade de alunos que estão na competição para o laço de repetição que recolherá a informação com o nome dos alunos que jogaram e sua pontuação
+    let qtdAlunos = parseInt(prompt("Quantos alunos da faculdade competiram no campeonato de jogos digitais?"))
+
+    let cont = 0
+    let nomes = []
+    let pontuacoes = []
+
+    // assim, ness alinha, enquanto o contador = 0 for menor que a quantidade de alunos jogando, será recolhido os dados dos nomes do jogador e suas pontuações
+    while (cont < qtdAlunos) {
+        nomes.push((prompt("Qual o nome do aluno " + (cont + 1) + "?")).toUpperCase())
+        pontuacoes.push(parseFloat(prompt("Qual foi a pontuação de " + nomes[cont] + "?")))
+
+        cont++
+    }
+
+    // iniciamos as avariaveis auxiliares para ordenar as listas de pontuações e nomes de forma decrescente, dessa maneira, as posições de cada item coincidem em informação
+    let maiorPont = 0
+    let maiorAluno = 0
+
+    // essa repetição serve para ordenar ambas as listas de forma decrescente, para que assim o primeiro item ser aquele com os dados do vencedor, tanto quanto nome quanto a pontuação
+    for (let j = 0; j < pontuacoes.length; j++) {
+        for (let i = 0; i < pontuacoes.length - 1;) {
+            if (pontuacoes[i] < pontuacoes[i + 1]) {
+                maiorPont = pontuacoes[i]
+                pontuacoes[i] = pontuacoes[i + 1]
+                pontuacoes[i + 1] = maiorPont
+
+                maiorAluno = nomes[i]
+                nomes[i] = nomes[i + 1]
+                nomes[i + 1] = maiorAluno
+
+                i++
+            } else {
+                i++
+            }
+        }
+    }
+
+    //exibição final das listas devidamente ordenadas
+    for (let k = 0; k < nomes.length; k++) {
+        document.write("<p>" + (k + 1) + "º LUGAR: " + nomes[k] + "</p>")
+        document.write("<p> PONTUAÇÃO: " + pontuacoes[k] + "</p> <hr>")
+    }
+    
+
+</script>

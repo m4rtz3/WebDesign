@@ -1,0 +1,22 @@
+<script>
+
+let i = 0
+    /* i igual a indice, não posição */
+    let impar = []
+    let par = []
+    let numero
+
+    for (i = 0; i < 10; i++) {
+        numero = Number(prompt("Valor:"))
+
+        if (numero%2 == 1) {
+            impar.push(numero)
+        } else {
+            par.push(numero)
+        }
+
+    }
+
+    document.write("PARES:" + "<p>" + par + "</p>" + "<hr>" + "ÍMPARES:" + "<p>" + impar + "</p>")
+
+</script>

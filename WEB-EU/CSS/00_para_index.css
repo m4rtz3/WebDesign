@@ -1,0 +1,108 @@
+body {
+    background-color: bisque;
+}
+
+#container {
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.menu {
+    background-color: rgb(116, 17, 17);
+    color: white;
+    padding: 10px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.menu h1 {
+    text-align: right;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: normal;
+    text-decoration: none;
+}
+
+menu, img {
+    float: inline-start;
+    width: 15%;
+    padding: 5px;
+}
+
+main {
+    background-color: rgb(36, 31, 21);
+    color: blanchedalmond;
+    padding: 10px;
+}
+
+main img {
+    float:right;
+    width: 25%;
+    padding: 5px;
+}
+
+main h1 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+    color:rgb(255, 255, 255);
+    text-decoration: underline;
+}
+
+main p {
+    font-family:'Courier New', Courier, monospace;
+    font-style: normal;
+    text-align: justify;
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.secoes {
+    background-color: burlywood;
+    justify-content: space-between;
+    display: flex;
+}
+
+.antigosvencedores {
+    background-color: bisque;
+    border: solid 2px rgb(0, 0, 0);
+    padding: 5px;
+}
+
+.antigosvencedores, img {
+    float: left;
+    padding: 5px;
+}
+
+.antigosvencedores, h3 {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-style: italic;
+    font-size: 15px;
+    color:saddlebrown;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.antigosvencedores, p {
+    font-family:'Courier New', Courier, monospace;
+    font-style: normal;
+    text-decoration: none;
+    color:saddlebrown;
+    text-align: justify;
+    font-size: 10px;
+}
+
+footer {
+    background-color: moccasin;
+    border: solid 2px;
+    border-radius: 0px 0px 10px 10px;
+    padding: 10px;
+}
+
+footer p {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}

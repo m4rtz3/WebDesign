@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seletores</title>
+
+</head>
+
+<body>
+
+    <h1>Operações Matemáticas utilizando-se de seletores do JavaScript</h1>
+
+    <table border="1px" onmouseover="calcular()" onmouseout="limpar ()">
+        <tr>
+            <th>Operação</th>
+            <th>Valor 1</th>
+            <th>Valor 2</th>
+            <th>Resultado</th>
+        </tr>
+
+        <tr>
+            <td>Soma</td>
+            <td class="soma">25</td>
+            <td class="soma">15</td>
+            <td class="soma"></td>
+        </tr>
+
+        <tr>
+            <td>Divisão</td>
+            <td class="divisao">150</td>
+            <td class="divisao">75</td>
+            <td class="divisao"></td>
+        </tr>
+
+        <tr>
+            <td>Multiplicação</td>
+            <td id="multiplicacao1">45</td>
+            <td id="multiplicacao2">7</td>
+            <td id="resultadoMultiplicacao"></td>
+        </tr>
+    </table>
+    <br>
+
+    <button onclick="calcular()">
+        Exibir Resultados
+    </button>
+
+    <script>
+
+        function calcular() {
+
+            let soma1 = parseInt(document.getElementsByClassName("soma")[0].innerText);
+            let soma2 = parseInt(document.getElementsByClassName("soma")[1].innerText);
+            let tdResultadoSoma = document.getElementsByClassName("soma")[2];
+
+            let resultadoSoma = soma1 + soma2;
+
+            tdResultadoSoma.innerText = resultadoSoma;
+
+            var divisao1 = parseInt(document.getElementsByClassName("divisao")[0].innerText);
+            var divisao2 = parseInt(document.getElementsByClassName("divisao")[1].innerText);
+            var tdresultadoDivisao = document.getElementsByClassName("divisao")[2];
+
+            var resultadodivisao = divisao1 / divisao2;
+
+            tdresultadoDivisao.innerText = resultadodivisao;
+
+            let multiplicacao1 = parseInt(document.getElementById("multiplicacao1").innerText);
+            let multiplicacao2 = parseInt(document.getElementById("multiplicacao2").innerText);
+            let tdMultiplicacao = document.getElementById("resultadoMultiplicacao");
+
+            let multiplicaResulta = multiplicacao1 * multiplicacao2;
+
+            tdMultiplicacao.innerText = multiplicaResulta;
+            // tdMultiplicacao.innerHTML = "<b>Texto</b>";
+            // Acima, para navegador interpretar como html
+
+        }
+
+        function limpar (){
+            let tdResultadoSoma = document.getElementsByClassName("soma")[2];
+            var tdresultadoDivisao = document.getElementsByClassName("divisao")[2];
+            let tdMultiplicacao = document.getElementById("resultadoMultiplicacao");
+
+            tdResultadoSoma.innerText = "";
+            tdresultadoDivisao.innerText = "";
+            tdMultiplicacao.innerText = "";
+        }
+
+    </script>
+
+</body>
+
+</html>

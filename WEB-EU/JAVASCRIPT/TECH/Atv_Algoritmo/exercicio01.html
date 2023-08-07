@@ -1,0 +1,51 @@
+<script>
+    let a = Number(prompt("Qual o 'lado a' do triângulo?"))
+    let b = Number(prompt("Qual o 'lado b' do triângulo?"))
+    let c = Number(prompt("Qual o 'lado c' do triângulo?"))
+
+    if (a < b + c && b < a + c && c < b + a) {
+        /* logo, é um triângulo, prosseguiremos com o exercício */
+
+        /* agora deve-se averiguar que o lado a é o maior que os outros dois lados */
+        if ((a < b && b < c) || (b < a && a < c)) {
+            /* troca de valores entre C e A, pois a<c */
+            let aMaior = c;
+            let cParaA = a;
+
+            if (Math.pow(aMaior, 2) == Math.pow(b, 2) + Math.pow(cParaA, 2)) {
+                document.write("É um triângulo retângulo!")
+            } else if (Math.pow(aMaior, 2) < Math.pow(b, 2) + Math.pow(cParaA, 2)) {
+                document.write("É um triângulo acutângulo!")
+            } else {
+                document.write("É um triângulo obtusângulo!")
+            }
+
+        } else if ((a < c && c < b) || (c < a && a < b)) {
+            /* troca de valores entre B e A, pois a<b */
+            let aMaior = b;
+            let bParaA = a;
+
+            if (Math.pow(aMaior, 2) == Math.pow(bParaA, 2) + Math.pow(c, 2)) {
+                document.write("É um triângulo retângulo!")
+            } else if (Math.pow(aMaior, 2) < Math.pow(bParaA, 2) + Math.pow(c, 2)) {
+                document.write("É um triângulo acutângulo!")
+            } else {
+                document.write("É um triângulo obtusângulo!")
+            }
+
+        } else {
+            /* aqui a > b ou > c, não é preciso haver trocas de valores */
+            if (Math.pow(a, 2) == Math.pow(b, 2) + Math.pow(c, 2)) {
+                document.write("É um triângulo retângulo!")
+            } else if (Math.pow(a, 2) < Math.pow(b, 2) + Math.pow(c, 2)) {
+                document.write("É um triângulo acutângulo!")
+            } else {
+                document.write("É um triângulo obtusângulo!")
+            }
+        }
+
+    } else {
+        document.write("Não forma um triângulo, recarregue a página e coloque outros valores!")
+    }
+
+</script>

@@ -1,0 +1,25 @@
+<script>
+    let cont, conta, numero
+    let total = 0
+
+    do {
+        numero = parseInt(prompt("Digite um numero"))
+
+        if (numero < 0) {
+            alert("O numero nao é positivo, voce deve digitar um numero positivo")
+        }
+    } while (numero <= 0)
+
+    for (cont = 2; cont < numero; cont++) {
+        if (numero % cont == 0) {
+            break
+        }
+    }
+
+    if (total == 0) {
+        alert("O numero é primo")
+    } else {
+        alert("O numero não é primo")
+    }
+
+</script>

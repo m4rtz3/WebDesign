@@ -1,0 +1,10 @@
+<script>
+    let vlrSmin = Number(prompt("Digite o salário mínimo vigente"))
+    let cnsAgua = Number(prompt("Digite o consumo mensal de da sua residência"))
+
+    let m3 = vlrSmin/130
+
+    let cns = cnsAgua * m3
+
+    document.write("O proprietário deverá pagar R$ " + cns.toFixed(2) + " pelo consumo de água!")
+</script>

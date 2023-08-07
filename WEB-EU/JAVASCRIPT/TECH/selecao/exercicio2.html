@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma e Média</title>
+
+    <script>
+
+        let provaUm = parseFloat(prompt("Qual foi a nota da primeira prova?"));
+        let provaDois = parseFloat(prompt("Qual foi a nota da segunda prova?"));
+        let trabalhoUm = parseFloat(prompt("Qual foi a nota do primeiro trabalho?"));
+        let trabalhoDois = parseFloat(prompt("Qual foi a nota do segundo trabalho?"));
+
+        let mediaProva = (provaUm + provaDois)/2;
+        let mediaTrabalho = (trabalhoUm + trabalhoDois)/2;
+
+        let mediaFinal = (0.7 * mediaProva) + (0.3 * mediaTrabalho);
+
+        if (mediaFinal >= 7) {
+            alert("O aluno foi aprovado, com a sua média final sendo " + mediaFinal +".");
+            document.write("O aluno foi aprovado, com a sua média final sendo " + mediaFinal +".");
+            window.print();
+        } else if (mediaFinal < 7) {
+            alert("O aluno foi reprovado, com a sua média final sendo " + mediaFinal +".");
+            document.write("O aluno foi reprovado, com a sua média final sendo " + mediaFinal +".");
+            window.print();
+        }
+
+    </script>
+
+</head>
+
+<body>
+</body>
+
+</html>

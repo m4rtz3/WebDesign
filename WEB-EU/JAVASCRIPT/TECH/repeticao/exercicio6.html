@@ -1,0 +1,20 @@
+<script>
+
+    let cont = 1;
+
+    let conta = 0;
+
+    let numero = parseInt(prompt("Digite um número"))
+    if (numero < 0) {
+        alert("O numero está negativo")
+    } else {
+
+        while (cont <= numero) {
+            conta = conta + cont / Math.sqrt(cont);
+            cont++
+        }
+
+        document.write(conta.toFixed(4))
+    }
+
+</script>

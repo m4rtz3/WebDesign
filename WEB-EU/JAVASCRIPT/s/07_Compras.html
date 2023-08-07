@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valor Devido</title>
+
+    <script>
+
+        var contaAgua = parseFloat(prompt("Qual o valor da sua conta de água desse mês?"));
+        var contaLuz = parseFloat(prompt("Qual o valor da sua conta de luz desse mês?"));
+        var contaMercado = parseFloat(prompt("Qual o valor da sua conta no mercado desse mês?"));
+
+        var somaContas = contaAgua + contaLuz + contaMercado;
+
+        alert("Total do Valor Devido do Mês Atual é R$" + somaContas);
+
+        var desconto = parseFloat(prompt("Há desconto? Se sim, de quanto? Em caso de não, digite 0."));
+
+        var contaComDesconto = somaContas - (somaContas * (desconto / 100));
+
+        alert("Total do Valor Devido do Mês Atual com ou sem Desconto é R$" + contaComDesconto);
+
+        console.log("Valor Devido Atual sem Desconto é R$" + somaContas);
+        console.log("Valor Devido Atual em caso de Desconto é R$" + contaComDesconto);
+
+    </script>
+
+</head>
+
+<body>
+    <h1>Valor Devido</h1>
+</body>
+
+</html>

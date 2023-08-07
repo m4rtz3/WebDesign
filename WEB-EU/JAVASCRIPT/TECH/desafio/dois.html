@@ -1,0 +1,33 @@
+<script>
+
+    /* let termos = parseInt(prompt("Em quantos termos será calculado?"))
+
+    let conta = Math.sqrt(2)
+    let equacao = []
+    let total = 0
+
+    for (let i = 0; i < termos; i++) {
+        equacao.push(conta)
+        conta = Math.sqrt(conta + 2)
+    }
+
+    for (let j = 0; j < equacao.length; j ++) {
+        total += equacao[j]
+        total = total/2
+    }
+
+    console.log("2/pi = " + total) */
+
+    
+    let termos = parseInt(prompt("Em quantos termos será calculado?"))
+
+    let conta = 0
+    let total = 0
+
+    for (let i = 0; i < termos; i++) {
+        conta = Math.sqrt(conta + 2)
+        total += conta / 2
+    }
+
+    console.log("2/π = " + total)
+</script>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página do Estoque</title>
+</head>
+
+<body>
+    <table border="1px">
+        <tr>
+            <th>Produto</th>
+            <th>Quantidade</th>
+            <th>Estoque</th>
+        </tr>
+
+        <tr>
+            <td>Borracha</td>
+            <td class="quantidade">97</td>
+            <td id="statusBorracha"></td>
+        </tr>
+        <tr>
+            <td>Caderno</td>
+            <td class="quantidade">12</td>
+            <td id="statusCaderno"></td>
+        </tr>
+        <tr>
+            <td>Caneta</td>
+            <td class="quantidade">35</td>
+            <td id="statusCaneta"></td>
+        </tr>
+    </table>
+    <br>
+    <button>
+        Verificar Estoque
+    </button>
+
+<script>
+   let btnVerificar = document.getElementsByTagName("button")[0];
+   btnVerificar.addEventListener("click", verificarEstoque);
+
+    function verificarEstoque() {
+        let quantidadeUm = parseInt(document.getElementsByClassName("quantidade")[0].innerText);
+        let quantidadeDois = parseInt(document.getElementsByClassName("quantidade")[1].innerText);
+        let quantidadeTres = parseInt(document.getElementsByClassName("quantidade")[2].innerText);
+
+        let statusBorracha = document.getElementById ("statusBorracha"); 
+        let statusCaderno = document.getElementById ("statusCaderno");
+        let statusCaneta = document.getElementById ("statusCaneta");
+        
+        if (quantidadeUm <= 20) {
+            statusBorracha.innerText = "Crítico";
+        } else if (quantidadeUm <= 50) {
+            statusBorracha.innerText = "Baixo";
+        } else {
+            statusBorracha.innerText = "Normal";
+        }
+
+        if (quantidadeDois <= 20) {
+            statusCaderno.innerText = "Crítico";
+         } else if (quantidadeDois <= 50) {
+            statusCaderno.innerText = "Baixo";
+         } else {
+            statusCaderno.innerText = "Normal";
+         }
+
+        if (quantidadeTres <= 20) {
+            statusCaneta.innerText = "Crítico";
+        } else if (quantidadeTres <= 50) {
+            statusCaneta.innerText = "Baixo";
+        } else {
+            statusCaneta.innerText = "Normal";
+        }
+    }
+    
+   
+</script>
+
+</body>
+
+</html>

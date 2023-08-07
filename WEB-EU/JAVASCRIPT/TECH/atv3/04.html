@@ -1,0 +1,108 @@
+<script>
+    let opcoes = ["Windows Server", "Unix", "Linux ", "Netware", "MacOS ", "Outros"]
+    let votos = [0, 0, 0, 0, 0, 0]
+
+    while (true) {
+        let valor = parseInt(prompt("Para qual opção irá seu voto? \n \n 1. Windows Server \n 2. Unix \n 3. Linux \n 4. Netware \n 5. MacOS \n 6. Outro \n \n 0. Se for interromper os votos, digite 0"))
+
+        if (valor === 0) {
+            break
+        }
+
+        if (valor >= 1 && valor <= 6) {
+            votos[valor - 1]++
+        } else {
+            alert("Opção inválida, vote de 1 a 6!")
+        }
+    }
+
+    let soma = 0
+    for (let i = 0; i < votos.length; i++) {
+        soma += votos[i]
+    }
+
+    if (soma === 0) {
+        document.write("Não houve votos.")
+    }
+
+    let porcentagens = [0, 0, 0, 0, 0, 0]
+    let conta = 0
+
+    for (let i = 0; i < votos.length; i++) {
+        conta = (100 * votos[i]) / soma
+        porcentagens[i] = conta
+    }
+
+    console.log(porcentagens)
+
+    let maiorOp
+    let maiorVot = 0
+    for (let j = 0; j < votos.length; j++) {
+        for (let i = 0; i < votos.length;) {
+            if (votos[i] < votos[i + 1]) {
+                maiorVot = votos[i]
+                votos[i] = votos[i + 1]
+                votos[i + 1] = maiorVot
+
+                maiorOp = opcoes[i]
+                opcoes[i] = opcoes[i + 1]
+                opcoes[i + 1] = maiorOp
+
+                i++
+            } else {
+                i++
+            }
+        }
+    }
+
+    let maiorPorc = 0
+    for (let j = 0; j < porcentagens.length; j++) {
+        for (let i = 0; i < porcentagens.length;) {
+            if (porcentagens[i] < porcentagens[i + 1]) {
+                maiorPorc = porcentagens[i]
+                porcentagens[i] = porcentagens[i + 1]
+                porcentagens[i + 1] = maiorPorc
+                i++
+            } else {
+                i++
+            }
+        }
+    }
+
+    console.log(opcoes)
+    console.log(votos)
+    console.log(porcentagens)
+
+    let empates = []
+    let votoVenc = votos[0]
+
+    for (let i = 1; i < votos.length; i++) {
+        if (votos[i] > votoVenc) {
+            votoVenc = votos[i]
+        }
+    }
+
+    for (let i = 0; i < votos.length; i++) {
+        if (votos[i] === votoVenc) {
+            empates.push(opcoes[i])
+        }
+    }
+
+    if (empates.length > 1) {
+    document.write("Houve um empate entre as opções: ")
+        for (let i = 0; i < empates.length; i++) {
+            document.write(empates[i] + " com " + (porcentagens[i]).toFixed(2) + "% de votos")
+            if (i < empates.length - 1) {
+                document.write(", ")
+            } else {
+                document.write(".")
+            }
+        }
+    } else {
+        document.write("O Sistema Operacional mais votado foi o " + opcoes[0] + " , com " + votos[0] + " votos, correspondendo a " + (porcentagens[0]).toFixed(2) + "% dos votos.")
+        document.write("Os demais são: ")
+        for(let k = 1; k < votos.length; k++) {
+            document.write("<p>" + opcoes[k] + ": " + votos[k] + " votos | " + (porcentagens[k]).toFixed(2) + "% de votos </p>")
+        }
+    }
+</script>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWITCH CASE 4</title>
+
+    <script>
+
+        let cargo = (prompt("Qual o seu cargo na empresa?")).toLowerCase();
+        let salario = parseFloat(prompt("Qual seu salário atual?"))
+        let tServ = parseInt(prompt("Há quantos anos você trabalha dentro da empresa?"))
+        let salarioNovo
+
+        switch (cargo) {
+            case 'gerente':
+                if (tServ < 3) {
+                    salarioNovo = salario + (salario * 0.08)
+                    document.write("O salário anual será de " + salarioNovo)
+                } else if (3 <= tServ <= 5) {
+                    salarioNovo = salario + (salario * 0.09)
+                    document.write("O salário anual será de " + salarioNovo)
+                } else {
+                    salarioNovo = salario + (salario * 0.1)
+                    document.write("O salário anual será de " + salarioNovo)
+                }
+                break
+
+            case 'engenheiro':
+            case 'engenheira':
+                if (tServ < 3) {
+                    salarioNovo = salario + (salario * 0.1)
+                    document.write("O salário anual será de " + salarioNovo)
+                } else if (3 <= tServ <= 5) {
+                    salarioNovo = salario + (salario * 0.11)
+                    document.write("O salário anual será de " + salarioNovo)
+                } else {
+                    salarioNovo = salario + (salario * 0.08)
+                    document.write("O salário anual será de " + salarioNovo)
+                }
+                break
+
+            default:
+                if (tServ < 3) {
+                    salarioNovo = salario + (salario * 0.1)
+                    document.write("O salário anual será de " + salarioNovo)
+                } else if (3 <= tServ <= 5) {
+                    salarioNovo = salario + (salario * 0.11)
+                    document.write("O salário anual será de " + salarioNovo)
+                } else {
+                    salarioNovo = salario + (salario * 0.12)
+                    document.write("O salário anual será de " + salarioNovo)
+                }
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <h1>Exercício do dia 14/04</h1>
+</body>
+
+</html>

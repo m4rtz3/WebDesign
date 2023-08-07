@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Exemplo</title>
+
+	<style type="text/css">
+		html, body {
+			overflow: hidden;
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+
+		#renderCanvas {
+			width: 100%;
+			height: 100%;
+			touch-action: none;
+		}
+	</style>
+
+	<script src="https://cdn.babylonjs.com/babylon.js"></script>
+	<script src="https://cdn.babylonjs.com/loaders/babylon.glTFFileLoader.js"></script>
+</head>
+<body>
+
+	<canvas id="renderCanvas"></canvas>
+
+	<script type="text/javascript">
+		// Este exemplo foi adaptado de:
+		// https://doc.babylonjs.com/setup/templates/basicTemplates/basicHTML
+
+		// Função do DOM para obter um elemento da página. No caso desse exemplo, o objeto
+		// é o canvas utilizado para renderizar a cena.
+		const canvas = document.getElementById("renderCanvas");
+
+		// Cria e inicia a engine do Babylon.js.
+		const engine = new BABYLON.Engine(canvas, true);
+
+		// Essa variável irá armazenar a cena.
+		let scene;
+
+		async function criarCena() {
+			// Cria o objeto da cena, que conterá todos os objetos, luzes, câmeras etc.
+			scene = new BABYLON.Scene(engine);
+			// clearColor é a cor do fundo, e ambientColor é a cor utilizada como "luz ambiente",
+			// que será aplicada à ambientColor dos materiais.
+			// https://doc.babylonjs.com/features/featuresDeepDive/environment/environment_introduction
+			scene.clearColor = new BABYLON.Color3(0.2, 0.2, 0.2);
+			scene.ambientColor = new BABYLON.Color3(0.5, 0.5, 0.5);
+
+			// Remova o comentário do código abaixo para mostrar o inspetor, que é um auxiliar
+			// sem igual para entender o que está acontecendo com a cena!
+			// https://doc.babylonjs.com/toolsAndResources/inspector
+			//scene.debugLayer.show({ embedMode: true });
+
+			// Cria a câmera que exibirá a cena, posicionando a câmera no ponto (0, 0.05, 0.05).
+			// O objeto sendo exibido é bem pequeno, por isso a posição é diferente, e menor.
+			// Ainda, o tipo de câmera é diferente, para permitir girar em torno do objeto, em
+			// vez de ficar vagando pelo espaço.
+			// https://doc.babylonjs.com/features/featuresDeepDive/cameras/camera_introduction#arc-rotate-camera
+			const camera = new BABYLON.ArcRotateCamera("camera", 1.1, 1.5, 0.05, BABYLON.Vector3.Zero(), scene);
+			// Como o objeto é muito pequeno, precisamos ajustar até as distâncias mínimas e
+			// máximas que podem ser exibidas pela câmera.
+			// https://doc.babylonjs.com/typedoc/classes/BABYLON.Camera#minZ
+			// https://doc.babylonjs.com/typedoc/classes/BABYLON.Camera#maxZ
+			camera.minZ = 0.0005;
+			camera.maxZ = 50;
+
+			// Utilitário que faz com que o teclado/mouse/toque controle a câmera.
+			camera.attachControl(canvas, true);
+
+			// Carrega uma imagem em um formato especial, que será mapeada para os seis lados de um
+			// cubo que será posicionado ao redor da cena, simulando um fundo tridimensional (skybox).
+			// https://doc.babylonjs.com/features/featuresDeepDive/materials/using/HDREnvironment
+			const hdrTexture = BABYLON.CubeTexture.CreateFromPrefilteredData("../texturas/environment.dds", scene);
+			const skybox = scene.createDefaultSkybox(hdrTexture, true);
+
+			// Cria a luz que irá iluminar a cena. Sem a luz, todos os objetos da cena ficariam pretos.
+			// Uma luz hemisférica pode ter duas cores, e serve para simular, de forma computacionalmente
+			// barata, a luz do dia em uma cena a céu aberto, onde uma cor vem "de cima", e outra cor vem
+			// "de baixo". O ponto (0, 1, 0) serve para guiar a direção da luz, não sua posição, como
+			// ocorre com a câmera. As luzes direcionais e hemisféricas não têm posição, só direção.
+			// https://doc.babylonjs.com/features/featuresDeepDive/lights/lights_introduction
+			// https://doc.babylonjs.com/typedoc/classes/BABYLON.HemisphericLight
+			const light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 1, 0), scene);
+			light.diffuse = new BABYLON.Color3(1, 1, 1);
+			light.specular = new BABYLON.Color3(1, 1, 1);
+			light.groundColor = new BABYLON.Color3(1, 0.55, 0);
+			light.intensity = 0.7;
+
+			// Carrega o objeto e seus materiais, e já adiciona tudo à cena. Mais opções:
+			// https://doc.babylonjs.com/features/featuresDeepDive/importers/loadingFileTypes
+			// AppendAsync() já adiciona o objeto à cena, ao passo que LoadAssetContainerAsync()
+			// permite que o objeto seja trabalhado antes de ser adicionado à cena.
+			const obj = await BABYLON.SceneLoader.AppendAsync("../objetos/", "boomBox.glb", scene);
+			//const container = await BABYLON.SceneLoader.LoadAssetContainerAsync("../objetos/", "boomBox.glb", scene);
+			//container.addAllToScene();
+
+			terminarCriacao();
+		};
+
+		function terminarCriacao() {
+			// Registra uma função para ser executada a cada quadro da cena. Como não temos
+			// uma lógica, a função apenas pede para que a cena se renderize.
+			engine.runRenderLoop(function () {
+				scene.render();
+			});
+		}
+
+		// Cria nossa cena.
+		criarCena().catch(function (reason) {
+			alert("Erro ao criar a cena: " + reason);
+		});
+
+		// Monitora o redimensionamento da tela do navegador.
+		window.addEventListener("resize", function () {
+			engine.resize();
+		});
+	</script>
+
+</body>
+</html>

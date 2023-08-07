@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equação</title>
+
+    <script>
+
+        let numero = Number(prompt("Digite um número:"));
+
+        if (numero >= 9) {
+
+            let equacao1 = numero - 8;
+            let equacao2 = (Math.pow(numero, 2) - 25);
+            let equacao3 = Math.sqrt(equacao2);
+
+            if (equacao1 < 0) {
+                equacao1 = (numero - 8) * -1;
+            } else if (equacao2 < 0) {
+                equacao2 = (Math.pow(numero, 2) - 25) * -1;
+            } else if (equacao3 < 0) {
+                equacao3 = (Math.sqrt(equacao2)) * -1;
+            }
+
+            let resultado = equacao1 / equacao3;
+
+            document.write("O resultado é " + resultado.toFixed(3) + ".");
+        } else {
+            document.write("Não dá para realizar a equação.");
+        }
+
+    </script>
+
+</head>
+
+<body>
+</body>
+
+</html>

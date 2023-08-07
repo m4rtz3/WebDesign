@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        body {
+            background-color: black;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-between;
+            align-items: center;
+            overflow: hidden;
+            background-color: black;
+            border-radius: 5px;
+        }
+
+        .div1 {
+            background: linear-gradient(-60deg, rgb(119, 0, 255), rgb(152, 76, 214), rgb(230, 172, 253));
+            color: beige;
+            font-weight: 800;
+            border-top: solid 2px rgb(255, 255, 255);
+            border-left: solid 2px rgb(255, 255, 255);
+            border-bottom: solid 2px rgb(255, 255, 255);
+            border-radius: 5px 0px 0px 5px;
+            padding: 10px;
+        }
+
+        .div2 {
+            background: linear-gradient(-60deg, rgb(211, 0, 0), rgb(245, 44, 44), rgb(255, 150, 150));
+            color: beige;
+            font-weight: 800;
+            border: solid 2px rgb(255, 255, 255);
+            border-radius: 0px 5px 5px 0px;
+            padding: 10px;
+        }
+
+        .texto h1 {
+            color: white;
+            text-align: center;
+            font-size: 18px;
+        }
+
+        .container .texto {
+            justify-items: center;
+        }
+
+        .container div h1 {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        .container, div, h1, p {
+            color: white;
+            text-align: right;
+            font-size: 12px;
+        }
+
+        img {
+            float: left;
+            width: 20%;
+        }
+    </style>
+
+    <title>Duas Divs</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="texto">
+            <h1>a</h1>
+        </div>
+
+        <div class="div1">
+            <h1>Div 1</h1>
+            <img src="imagens/among-us-da-games.gif" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat atque, sint similique quaerat quibusdam
+                odit inventore eveniet corporis saepe veritatis aperiam, odio nostrum. Reiciendis, exercitationem
+                laudantium
+                esse pariatur asperiores aliquam?</p>
+        </div>
+        <div class="div2">
+            <h1>Div 2</h1>
+            <img src="imagens/among-us.gif" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat atque, sint similique quaerat quibusdam
+                odit inventore eveniet corporis saepe veritatis aperiam, odio nostrum. Reiciendis, exercitationem
+                laudantium
+                esse pariatur asperiores aliquam?</p>
+        </div>
+
+    </div>
+</body>
+
+</html>

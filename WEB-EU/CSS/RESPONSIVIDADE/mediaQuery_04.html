@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(194, 213, 255);
+        }
+
+        header {
+            text-align: center;
+                background-color: rgb(87, 118, 185);
+                border-bottom: solid 3px rgb(87, 118, 185);
+        }
+
+        header img {
+            width: 30%;
+            margin: 20px;
+        }
+
+        nav {
+            color: rgb(0, 0, 0);
+            display: flex;
+            flex-direction: column;
+            margin-top: 5px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        a {
+            display: block;
+            font-size: larger;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-color: white;
+            border: solid 1px rgb(87, 118, 185);
+            color: rgb(87, 118, 185);
+            text-align: center;
+            border-radius: 10px;
+            text-decoration: none;
+            padding: 10px;
+            margin: 10px;
+        }
+
+        a:hover {
+            background-color: rgb(87, 118, 185);
+            border: solid 1px rgb(87, 118, 185);
+            color: rgb(255, 255, 255);
+            box-shadow: 0px 0px 25px rgb(49, 74, 129);
+        }
+
+        li {
+            margin: 10px 0px;
+            margin-top: 0;
+        }
+
+        @media (min-width:780px) {
+
+            body {
+                background-color: rgb(255, 205, 230);
+            }
+
+            header {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            ul {
+                display: flex;
+            }
+
+            a {
+                color: white;
+                background-color: rgba(127, 255, 212, 0);
+                border: none;
+            }
+
+            a:hover {
+                border: none;
+                border-radius: 5px;
+                box-shadow: 0px 0px 15px rgb(49, 74, 129);
+            }
+        }
+
+    </style>
+
+    <title>Website Planet</title>
+</head>
+
+<body>
+
+    <div id="container">
+
+        <header>
+            <img src="imagens/logo.png" alt="">
+
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Teste</a>
+                    </li>
+                    <li>
+                        <a href="#">Teste</a>
+                    </li>
+                    <li>
+                        <a href="#">Teste</a>
+                    </li>
+                    <li>
+                        <a href="#">Teste</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+
+</body>
+
+</html>

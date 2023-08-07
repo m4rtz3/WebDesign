@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Dois</title>
+</head>
+
+<body>
+    <table border="1px">
+        <tr>
+            <th>Cores</th>
+            <th>Frutas</th>
+            <th>Ordem</th>
+        </tr>
+
+        <tr id="coresTr">
+        </tr>
+
+        <tr id="frutasTr">
+        </tr>
+
+        <tr id="ordemTr">
+        </tr>
+    </table>
+    <br><br>
+    <button>Shazam</button>
+
+    <script>
+        btnShazam = document.getElementsByTagName("button")[0];
+        btnShazam.addEventListener("click", fazListas)
+
+        function fazListas() {
+
+            let cores = ["Lavanda", "Roxo", "Lilás", "Violeta", "Purpúra"];
+            let frutas = ["Limão", "Laranja", "Maçã", "Melância", "Banana"];
+
+            var listaCores = document.getElementById("coresTr");
+            var listaFrutas = document.getElementById("frutasTr");
+            var listaOrdem = document.getElementById("ordemTr");
+
+            for (cont = 0; cont < 5; cont++) {
+                listaCores.innerHTML += "<td>" + cores[cont] + "</td>";
+                listaFrutas.innerHTML += "<td>" + frutas[cont] + "</td>";
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

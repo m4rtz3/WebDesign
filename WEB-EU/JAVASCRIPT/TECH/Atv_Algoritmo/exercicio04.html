@@ -1,0 +1,23 @@
+<script>
+    let nomeFunc = prompt("Qual o nome do funcionário?")
+    let nUniAtual = parseInt(prompt("Quantas unidades foram produzidas por esse funcionário nesse ano?"))
+    let nUniAnt = parseInt(prompt("Quantas unidades foram produzidas por esse funcionário no ano anterior?"))
+
+    if (nUniAnt > nUniAtual || nUniAnt == nUniAtual) {
+        document.write("O funcionário não receberá o bônus por não ter produzido mais unidades esse ano comparado com o anterior!")
+    } else {
+        let diferenca = nUniAtual - nUniAnt
+
+        if (diferenca < 1001) {
+            document.write(nomeFunc + " receberá R$25,00 de bônus.")
+        } else if (1001 <= diferenca && diferenca <= 3000) {
+            document.write(nomeFunc + " receberá R$50,00 de bônus.")
+        } else if (3001 <= diferenca && diferenca <= 6000) {
+            document.write(nomeFunc + " receberá R$100,00 de bônus.")
+        } else {
+            document.write(nomeFunc + " receberá R$200,00 de bônus.")
+        }
+
+    }
+
+</script>

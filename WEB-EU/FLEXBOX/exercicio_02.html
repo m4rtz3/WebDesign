@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+
+        div {
+            border-radius: 20px;
+        }
+
+        #caixaUm {
+            background-color: orange;
+            border: solid 5px black;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            box-sizing: border-box;
+        }
+
+        .itemUm {
+            background-color: lightgreen;
+            border: solid 5px red;
+            width: 900px;
+            height: 300px;
+            margin: 40px;
+            padding-right: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            align-items: center;
+        }
+
+        .itemDois {
+            background-color: lightgreen;
+            border: solid 5px red;
+            width: 900px;
+            height: 300px;
+            margin: 40px;
+            padding-left: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: baseline;
+            align-items: center;
+        }
+
+        .itemDentro1 {
+            background-color: cornflowerblue;
+            width: 200px;
+            height: 200px;
+        }
+
+        #caixaDois {
+            background-color: yellow;
+            border: solid 5px black;
+            padding: 30px;
+            margin-top: 20px;
+        }
+
+        .itemTres {
+            background-color:rgb(255, 200, 187);
+            border: solid 5px red;
+            height: 250px;
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .itemDentro2 {
+            background-color: red;
+            border: solid 2px black;
+            width: 150px;
+            height: 150px;
+        }
+
+    </style>
+
+    <title>Flexbox</title>
+</head>
+
+<body>
+    <div id="caixaUm">
+        <div class="itemUm">
+            <div class="itemDentro1"></div>
+        </div>
+        <div class="itemDois">
+            <div class="itemDentro1"></div>
+        </div>
+    </div>
+    <div id="caixaDois">
+        <div class="itemTres">
+            <div class="itemDentro2"></div>
+        </div>
+    </div>
+
+</body>
+
+</html>

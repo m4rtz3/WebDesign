@@ -1,0 +1,45 @@
+<script>
+
+    // criação da variável de um dos componentes que são somados para formar o número em base decimal final
+    let nmrDec = 0
+
+    // criação da variável que ajudará a quebrar o número em base binária fornecida pelo usuário
+    let numero = 0
+
+    // criação de uma variável que armazenará o número em base decimal final
+    let decimal = 0
+
+    // criação de uma variável que ajudará a determinar se o número digitado pelo usuário está em casa binária ou não
+    let erro = 0
+
+
+    // o usuário digita o número na casa binária
+    let binario = prompt("Digite um número em binário")
+
+    // criação de um laço de repetição para analisar cada um dos digítos do número
+    for (let i = 0; i < binario.length; i++) {
+        numero = parseInt(binario[i])
+
+        if ((numero !== 0) && (numero !== 1)) {
+            // caso o número digitado pelo usuário tenha um número que não seja 1 ou zero, não está em binário
+            // logo, ele está com erro
+            erro++
+
+        } else {
+            /* nessa conta, dependendo do tamanho do numero binario, caso seja feito a conta de subtração com 1 e
+            subtraindo tambem pelo contador, saberemos o expoente de base dois que começaremos a conversão de binário para decimal.
+            Assim, ao multiplicarmos pelo digito, teremos sua tradução apra decimal e que fará parte para a soma que usaremos para descobrimos qual numero decimal está sendo representado */
+            let conta = Math.pow(2, (binario.length - 1 - i))
+            nmrDec = numero * conta
+
+            decimal += nmrDec
+        }
+    }
+
+    if (erro == 0) {
+        document.write("<p>Binário: " + binario + "</p>" + "<p>Decimal: " + decimal + "</p>")
+    } else {
+        // quando houver erro pelo número ter números diferentes de 1 e/ou 0...
+        alert("O número não está na base binária. Recarregue a página e digite um número na base binária!")
+    }
+</script>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valores</title>
+
+    <script>
+
+        // Entrada das variáveis
+        let algorismoX = Number(prompt("Digite um número de três digitos"));
+
+        let operacao1 = Math.trunc(algorismoX/100);
+        let operacao2 = algorismoX - (operacao1*100);
+
+        let operacao3 = Math.trunc(operacao2/10);
+        let operacao4 = operacao2 - (operacao3*10);
+
+        // Saída dessas variáveis
+        document.write("O digíto na casa da unidade é " + operacao4 + "</br>" + "O digíto na cada das dezenas é " + operacao3);
+
+    </script>
+
+</head>
+
+<body>
+</body>
+
+</html>

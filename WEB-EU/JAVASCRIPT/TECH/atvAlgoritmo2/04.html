@@ -1,0 +1,37 @@
+<script>
+
+    // uma variável para armazenar o valor de 4 milhões
+    let contagem = 4000000 // os quatro milhoes
+
+    // criação de uma lista para conter a sequencia de fibonacci
+    let fibonacci = []
+
+    // criação das variáveis que ajudam a formar o fibonacci
+    let anterior = 0
+    let proximo = 1
+
+    // criação da variável que fará a soma final dos pares
+    let soma = 0
+
+    // laço de repetição para a criação dos itens do fibonacci e colocá-los na lista
+    while (proximo <= contagem) {
+        let transicao = anterior + proximo
+        fibonacci.push(proximo)
+        anterior = proximo
+        proximo = transicao
+    }
+
+    // laço de repetição para analisar cada item da lista do fibonacci, realizando uma conta para descobri se é par, caso seja...
+    // passará pela soma total
+    for (let i = 0; i < fibonacci.length; i++) {
+
+        let pares = fibonacci[i]
+
+        if (pares % 2 === 0) {
+            soma += pares
+        }
+    }
+
+    document.write("A soma dos pares da sequência de Fibonacci segundo o enunciado é " + Number(soma) + ".")
+
+</script>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HQS Brasileiras</title>
+</head>
+
+<body>
+
+    <h1 id="titulo">Comics Brasileiras</h1>
+
+    <p>"Forma ou Consciência"</p>
+    <a class="link" href="https://tapas.io/series/Forma-ou-Consciencia">Clique aqui</a>.
+    <br><br>
+    <p>"Ping Pong & Drama"</p>
+    <a class="link" href="https://tapas.io/episode/2079656">Clique aqui</a>.
+    <br><br>
+    <p>"Confinada"</p>
+    <a class="link" href="https://www.amazon.com.br/Confinada-Leandro-Assis/dp/6556922137">Clique aqui</a>.
+
+    <script>
+
+        var paragrafo1 = document.getElementsByTagName("p")[0];
+        paragrafo1.style.color = "red";
+
+        var paragrafo2 = document.getElementsByTagName("p")[1];
+        paragrafo2.style.color = "yellow";
+
+        var paragrafo3 = document.getElementsByTagName("p")[2];
+        paragrafo3.style.color = "green";
+
+        var link1 = document.getElementsByClassName("link")[0];
+        var link2 = document.getElementsByClassName("link")[1];
+        var link3 = document.getElementsByClassName("link")[2];
+
+        link1.style.color = "darkred";
+        link2.style.color = "goldenrod";
+        link3.style.color = "darkgreen";
+
+        var titulo = document.getElementById("titulo");
+
+        titulo.style.color = "white";
+
+        document.body.style.background = "lightgray";
+        document.body.style.textAlign = "center";
+
+        document.write(paragrafo1.innerText);
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifique a sua Média</title>
+</head>
+
+<body>
+    <h1>Média das 2 Provas</h1>
+    <form>
+        <label for="alunonotaUm">Nota da Primeira Prova:</label>
+        <br>
+        <input type="text" name="alunoNotaUm" id="notaUm">
+        <br>
+        <label for="alunonotaDois">Nota da Segunda Prova:</label>
+        <br>
+        <input type="text" name="alunoNotaDois" id="notaDois">
+        <br>
+        <label for="alunomedia">Média das Provas</label>
+        <br>
+        <input type="text" name="alunoMedia" id="media">
+        <br><br>
+        <input type="button" id="verificar" value="Verificar Média">
+    </form>
+
+    <script>
+        document.body.style.textAlign = "center";
+
+let btnVerificar = document.getElementById("verificar");
+btnVerificar.addEventListener("click", validarClique);
+
+function validarClique() {
+    // Comentário!!!!
+    let notaUm = parseFloat(document.getElementById("notaUm").value);
+    let notaDois = parseFloat(document.getElementById("notaDois").value);
+    let fMediaFinal = document.getElementById("media");
+
+    let mediaFinal = (notaUm + notaDois) / 2;
+    fMediaFinal.value = mediaFinal;
+
+    alert("Sua média é:" + mediaFinal)
+    window.print();
+}
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<script>
+    let aleatorios = new Array(10)
+    let numero = 0
+
+    for (let i = 0; i < aleatorios.length; i++) {
+        aleatorios[i] = parseInt(Math.random() * 11)
+
+    }
+
+    let maior = 0
+    for (let j = 0; j < aleatorios.length; j++) {
+        for (let i = 0; i < aleatorios.length;) {
+            if (aleatorios[i] < aleatorios[i + 1]) {
+                maior = aleatorios[i]
+                aleatorios[i] = aleatorios[i + 1]
+                aleatorios[i + 1] = maior
+                i++
+            } else {
+                i++
+            }
+        }
+    }
+
+    console.log(aleatorios)
+
+</script>

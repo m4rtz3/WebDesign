@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Celsius para Fahrenheit</title>
+
+    <script>
+
+        let salMin = Number(prompt("Qual o valor atual do salário mínimo?"));
+        let kwCasa = Number(prompt("Quantos quilowatts foram gastos na residência?"));
+
+        let totalPago = [(1/7 * salMin) * kwCasa]/100;
+        let kwCada = totalPago/kwCasa;
+        let desconto = totalPago - (totalPago*10/100)
+
+        alert("O valor em reais de cada quilowatt é" + kwCada);
+        alert("O valor em reais a ser pago pela residência " + totalPago);
+        alert("O novo valor a ser pago pela residência considerando um desconto de 10% " + desconto);
+        documento.write("Cada quilowatt vale em reais " + kwCada + " e o valor em reais da conta é de " + totalPago + ", mas com o desconto de 10% é de " + desconto);
+        window.print();
+
+    </script>
+
+</head>
+
+<body>
+</body>
+
+</html>

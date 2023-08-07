@@ -1,0 +1,58 @@
+<script>
+
+    let pontoCx = Number(prompt("Qual a coordenada x do ponto C?"))
+    let pontoCy = Number(prompt("Qual a coordenada y do ponto C?"))
+
+    let nmr = parseInt(prompt("Digite um número natural"))
+    let pontosX = []
+    let pontosY = []
+
+    for (let i = 0; i < nmr; i++) {
+        pontosX.push(Number(prompt("Escreva a coordenada x do ponto " + (i + 1))))
+        pontosY.push(Number(prompt("Escreva a coordenada y do ponto " + (i + 1))))
+    }
+
+    let distancia = []
+    let auxContaUm = 0
+    let auxContaDois = 0
+    let contaX = 0
+    let contaY = 0
+    let conta = 0
+
+    for (let i = 0; i < nmr; i++) {
+        auxContaUm = pontoCx - pontosX[i]
+
+        if (auxContaUm < 0) {
+            auxContaUm = auxContaUm * -1
+        }
+
+        contaX = Math.pow(auxContaUm, 2)
+
+        if (contaX < 0) {
+            contaX = contaX * -1
+        }
+
+        auxContaDois = pontoCy - pontosY[i]
+
+        if (auxContaDois < 0) {
+            auxContaDois = auxContaDois * -1
+        }
+
+        contaY = Math.pow(auxContaDois, 2)
+
+        if (contaY < 0) {
+            contaY = contaY * -1
+        }
+
+        conta = (Math.sqrt(contaX + contaY).toFixed(3))
+        
+        if (conta < 0) {
+            conta = conta * -1
+        }
+
+        distancia.push(conta)
+    }
+
+    alert(distancia)
+
+</script>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ercericio 3</title>
+
+    <script>
+
+        let pontoUmX = parseInt(prompt("Informe o X do ponto 1:"))
+        let pontoUmY = parseInt(prompt("Informe o Y do ponto 1:"))
+
+        let pontoDoisX = parseInt(prompt("Informe o X do ponto 2:"))
+        let pontoDoisY = parseInt(prompt("Informe o Y do ponto 2:"))
+
+        let distanciaUm = Math.sqrt(pontoUmX * pontoUmX + pontoUmY * pontoUmY);
+        let distanciaDois = Math.sqrt(pontoDoisX * pontoDoisX + pontoDoisY * pontoDoisY);
+
+        if (distanciaUm < distanciaDois) {
+            alert("O ponto 1 está mais próximo de zero que o ponto 2");
+        } else if (distanciaUm == distanciaDois) {
+            alert("A distância é a mesma")
+        } else {
+            alert("O ponto 2 está mais próximo de zero que o ponto 1");
+        }
+
+    </script>
+
+</head>
+
+<body>
+</body>
+
+</html>

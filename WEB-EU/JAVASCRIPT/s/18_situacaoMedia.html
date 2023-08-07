@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verifique a sua Média</title>
+
+</head>
+
+<body>
+    <h1>Média Anual</h1>
+    <form>
+        <label for="alunonotaUm">Primeira Nota:</label>
+        <br>
+        <input type="text" name="alunoNotaUm" id="notaUm">
+        <br>
+        <label for="alunonotaDois">Segunda Nota:</label>
+        <br>
+        <input type="text" name="alunoNotaDois" id="notaDois">
+        <br>
+        <label for="alunonotaTres">Terceira Nota:</label>
+        <br>
+        <input type="text" name="alunoNotaTres" id="notaTres">
+        <br><br>
+        <label for="alunomedia">Média Final</label>
+        <br>
+        <input type="text" name="alunoMedia" id="media">
+        <br><br>
+        <input type="button" id="verificar" value="Verificar Média">
+    </form>
+
+    <script>
+
+        document.body.style.textAlign = "center";
+
+        let btnVerificar = document.getElementById("verificar");
+        btnVerificar.addEventListener("click", validarClique);
+
+        function validarClique() {
+            let notaUm = parseFloat(document.getElementById("notaUm").value);
+            let notaDois = parseFloat(document.getElementById("notaDois").value);
+            let notaTres = parseFloat(document.getElementById("notaTres").value);
+            let fMediaFinal = document.getElementById("media");
+
+            let mediaFinal = (notaUm + notaDois + notaTres) / 3;
+            fMediaFinal.value = mediaFinal;
+
+            if (mediaFinal >= 6) {
+                alert("Você foi aprovado, parabéns!")
+            } else if (2 < mediaFinal < 6) {
+                alert("Você está de recuperação, estude mais!")
+            } else if (mediaFinal <= 2) {
+                alert("Você foi reprovado, nos vemos de novo ano que vem!")
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

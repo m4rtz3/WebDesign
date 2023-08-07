@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        img {
+            width: 75%;
+            border-radius: 1000px 1000px 0px 0px;
+        }
+
+        .outraImg {
+            width: 15%;
+            border-radius: 0;
+        }
+
+        .imagemUm {
+            display: none;
+        }
+
+        .teste {
+            cursor: pointer;
+        }
+
+        /* .teste::after {
+            content: attr(data-descr);
+            position: absolute;
+            left: 0;
+            top: 24px;
+            min-width: 200px;
+            border: 1px #aaaaaa solid;
+            border-radius: 10px;
+            background-color: #ffffcc;
+            padding: 12px;
+            color: #000000;
+            font-size: 14px;
+            z-index: 1;
+        } */
+
+
+        .mostrar {
+            display: block;
+        }
+
+        .mostrar::after {
+            content: url(fc1.png);
+            position: absolute;
+        }
+
+        .conjunto {
+            margin-top: -20px;
+        }
+
+        /* Depois colocar imagens de fundo das divs, criar uma div para cada carta e assim poder colocar em cada fundo, ou fazer que cada fundo mude sozinho com um mouseover */
+        .carta {
+            border-radius: 10px;
+            margin: 10px;
+            padding: 10px;
+            background-color: #b2b392;
+        }
+
+        .carta h5 {
+            font-size: larger;
+            margin: 5px;
+        }
+
+        .carta p {
+            font-size: medium;
+            margin-top: 55px;
+            margin: 5px;
+        }
+
+        @media (min-width:960px) {
+            body {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .conjunto {
+                display: flex;
+                flex-direction: row;
+                margin-top: -40px;
+            }
+
+        }
+    </style>
+
+    <title>Teste do Teste</title>
+</head>
+
+<body>
+
+    <img src="fc4.png" alt="">
+
+    <div class="conjunto">
+        <div class="carta">
+            <h5>
+                Lorem ipsum dolor sit
+                <span class="teste"> destaque
+
+                    <div class="imagemUm">
+                        <img src="fc1.png" alt="" class="outraImg">
+                    </div>
+                </span>.
+            </h5>
+
+
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam blanditiis, cumque recusandae iusto aut
+                consequatur reprehenderit odio laudantium? Nobis, architecto?</p>
+        </div>
+        <div class="carta">
+            <h5>
+                Lorem ipsum dolor sit amet consectetur.
+            </h5>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam blanditiis, cumque recusandae iusto aut
+                consequatur reprehenderit odio laudantium? Nobis, architecto?</p>
+        </div>
+        <div class="carta">
+            <h5>
+                Lorem ipsum dolor sit amet consectetur.
+            </h5>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam blanditiis, cumque recusandae iusto aut
+                consequatur reprehenderit odio laudantium? Nobis, architecto?</p>
+        </div>
+        <div class="carta">
+            <h5>
+                Lorem ipsum dolor sit amet consectetur.
+            </h5>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam blanditiis, cumque recusandae iusto aut
+                consequatur reprehenderit odio laudantium? Nobis, architecto?</p>
+        </div>
+    </div>
+
+    <script>
+        let teste = document.getElementsByClassName("teste")[0];
+        let imagemUm = document.getElementsByClassName("imagemUm")[0];
+
+        teste.addEventListener("mouseover", mostrar);
+        teste.addEventListener("mouseout", esconder);
+
+        function mostrar() {
+            imagemUm.classList.add("mostrar");
+        }
+
+        function esconder() {
+            imagemUm.classList.remove("mostrar");
+        }
+    </script>
+
+</body>
+
+</html>

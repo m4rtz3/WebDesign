@@ -1,0 +1,39 @@
+<script>
+
+    // pedindo ao usuário que seja dito quantos alunos fizeram a pesquisa
+    let qtdAlunos = parseInt(prompt("Quantos alunos realizaram a pesquisa?"))
+
+    let resposta = [] // contendo os contras e os a favor juntos
+    let contra = []
+    let aFavor = []
+
+    // fazer uma verificação para ter certeza que o número digitado pelo usuário não é real, mas inteiro
+    if (isNaN(resposta)) {
+        alert("O algoritmo só aceita números inteiros")
+    } else {
+
+        // desses alunos pesquisados, descobrir quais deles são contra ou favor
+        for (let i = 0; i < qtdAlunos; i++) {
+            resposta.push((prompt("O aluno " + (i + 1) + " foi a favor ou contra?")).toLowerCase())
+        }
+
+        // assim, dependendo da resposta digitada, ela será acrescentada na sua respectiva lista
+        for (let j = 0; j < resposta.length; j++) {
+            if ((resposta[j] === "a favor") || (resposta[j] === "favor") || (resposta[j] === "afavor")) {
+                aFavor.push(j)
+            } else if (resposta[j] === "contra") {
+                contra.push(j)
+            } else {
+                alert("Você digitou uma resposta diferente da exigida. Recarregue a página!")
+            }
+        }
+
+        // conta para descobrir a porcentagem de alunos a favor e contra
+        let aFavPorc = (100 * (aFavor.length)) / qtdAlunos
+        let contraPorc = (100 * (contra.length)) / qtdAlunos
+
+        document.write("<p>" + "Alunos que são a favor a criação da estação de bicicletas compartilhadas: <b>" + aFavPorc + "%. </b>" + "</p> <p>" + "Alunos que são contra a criação da estação de bicicletas compartilhadas: <b>" + contraPorc + "%. </b>" + "</p>")
+
+        window.print()
+    }
+</script>

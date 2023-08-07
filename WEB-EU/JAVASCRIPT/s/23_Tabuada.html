@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tabuada</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            font-family: Poppins;
+            color: blueviolet;
+        }
+
+        input {
+            border: 2px solid blueviolet;
+            border-radius: 30px;
+            padding: 5px 10px;
+            margin: 10px;
+        }
+
+        #tabuada {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            width: 200px;
+        }
+
+        #tabuada span {
+            border: 1px solid blueviolet;
+            padding: 5px 10px;
+            text-align: center;
+        }
+
+        #titulo {
+            background-color: blueviolet;
+            color: #fff;
+            text-align: center;
+            padding: 15px 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Exercício de Tabuada</h1>
+    </header>
+    <main>
+        <form>
+            <label for="numero">Informe o número que deseja saber a tabuada</label><br>
+            <input type="text" name="numero" id="numeroTabua">
+            <input type="button" id="btnTabuada" value="Calcular Tabuada">
+        </form>
+
+        <div id="tabuada">
+
+        </div>
+    </main>
+
+    <script>
+        let btnTabuada = document.getElementById("btnTabuada");
+        btnTabuada.addEventListener("click", calcularTabuada);
+
+        function calcularTabuada() {
+            var numero = parseInt(document.getElementById("numeroTabua").value);
+            var tabela = document.getElementById("tabuada");
+
+            for (cont = 0; cont < 11; cont++) {
+                if (cont === 0) {
+                    tabela.innerHTML = '<div id="titulo">Tabuada!</div>';
+                }
+                tabela.innerHTML += "<span>" + numero + " x " + cont + " = " + (numero * cont) + "</span>";
+            }
+
+            // let cont = 0
+            // while (cont < 11) {
+            //     tabela.innerHTML += "<span>" + numero + "x" + cont + "=" + (numero*cont) + "</span>";
+            //     cont++;
+            // }
+
+            // if (tabela.innerHTML += "<span>" + numero + " x " + cont + " = " + (numero * cont) + "</span>") {
+            //     tabela.innerHTML = '<div id="titulo">Tabuada!</div>';
+            //     for (cont = 0; cont < 11; cont++) {
+            //         tabela.innerHTML += "<span>" + numero + " x " + cont + " = " + (numero * cont) + "</span>";
+            //     }
+            // }
+
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>

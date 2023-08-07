@@ -1,0 +1,27 @@
+<script>
+
+    /*  let aleatorios = [] */
+    let aleatorios = new Array(5)
+    let identico
+
+    /* let valor = parseInt((Math.random()*8999)+1000)
+    alert(valor) */
+
+    for (let i = 0; i < aleatorios.length;) {
+        aleatorios[i] = parseInt(Math.random() * 5)
+        identico = 1
+
+        for (let j = 0; j < i; j++) {
+            if (aleatorios[i] === aleatorios[j]) {
+                identico = 0
+                break;
+            }
+        }
+
+        if (identico == 1) {
+            i++
+        }
+    }
+
+    alert(aleatorios)
+</script>

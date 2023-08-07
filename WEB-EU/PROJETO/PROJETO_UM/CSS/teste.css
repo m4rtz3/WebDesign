@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+#container {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    background-image: url(../imagens2/header.jpg);
+    height: 20vh;
+    padding: 0px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    width: 150px;
+    filter: drop-shadow(0px 0px 15px #d2deff);
+}
+
+header .menu_icon {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+.menu_principal {
+    background-color: #ffe7a4;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 21vh;
+    left: 0vh;
+}
+
+.menu_principal ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu_principal ul li {
+    list-style: none;
+    padding: 30px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2.5em;
+}
+
+.menu_principal ul li a {
+    text-decoration: none;
+}
+
+.menu_principal a {
+    font-family: 'Yeseva One', cursive;
+    font-size: medium;
+    color: rgb(156, 118, 47);
+    text-decoration: none;
+    background-color: rgba(255, 221, 128, 0);
+    margin: 8px 60px;
+    border: solid 2px rgba(156, 118, 47, 0);
+}
+
+.menu_principal a:hover {
+    color: rgb(156, 118, 47);
+    text-decoration: none;
+    background-color: #ffe7a4;
+    margin: 0px 0px;
+    padding: 8px 60px;
+    border-radius: 15px;
+    border: solid 2px rgb(156, 118, 47);
+}
+
+#toggle {
+    display: none;
+}

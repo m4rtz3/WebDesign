@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>exercicio 1</title>
+
+</head>
+
+<body>
+    <script>
+
+        // Entrada
+        let n = parseFloat(prompt("Digite um número:"));
+
+        let xUm = n/100;
+        let xDois = (n%100)/10;
+        alert(xDois)
+        let xTres = n%10;
+        alert(xTres)
+        let xQuatro = xUm + xDois + xTres;
+
+        alert("O resultado final é igual a " + Math.trunc(xQuatro));
+        document.write("O resultado final é igual a " + Math.trunc(xQuatro));
+        window.print();
+
+    </script>
+</body>
+
+</html>

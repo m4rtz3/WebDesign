@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laço de Repetição - For</title>
+</head>
+<body>
+    <h1>Laço de Repetição - For</h1>
+
+    <div id="Frutas">
+
+    </div>
+
+    <div id="Cores">
+
+    </div>
+
+    <script>
+
+        let frutas = ["Abacate", "Abacaxi", "Ameixa", "Caju", "Damasco"];
+
+        let divFrutas = document.getElementById("Frutas");
+        divFrutas.style.background = "lightgray";
+        divFrutas.style.width = "300px";
+        divFrutas.style.height = "100";
+
+        let cont = 0
+        while (cont < frutas.length) {
+            divFrutas.innerHTML += "<h5>" + frutas [cont] + "</h5>";
+            cont++;
+        }
+
+        let cores = ["Violeta", "Roxo", "Lilás", "Amarelo", "Laranja"];
+        
+        let divCores = document.getElementById("Cores");
+        divCores.style.background = "lightgray";
+        divCores.style.width = "300px";
+        divCores.style.height = "100";
+
+        for (cont2 = 0; cont2 < 5; cont2++) {
+            divCores.innerHTML += "<h5>" + cores [cont2] + "</h5>";
+        }
+
+        document.body.style.textAlign = "center";
+
+    </script>
+
+</body>
+</html>

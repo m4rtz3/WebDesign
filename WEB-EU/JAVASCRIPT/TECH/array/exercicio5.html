@@ -1,0 +1,25 @@
+<script>
+
+    let i = 0
+    let media = 0
+    /* i igual a indice, não posição */
+    let temperatura = []
+    let dias = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"]
+
+    for (i = 0; i < dias.length; i++) {
+        temperatura[i] = Number(prompt("Temperatura no(a) " + dias[i]))
+    }
+
+    for (i = 0; i < dias.length; i++) {
+        document.write("<h3>" + dias[i])
+        for (let j = 1; j <= temperatura[i]; j++) {
+            document.write("-")
+        }
+        document.write("</h3>")
+    }
+
+/*     for (i = 0; i < dias.length; i++) {
+        document.write("<p>" + "<b>" + "Dia: " + "</b>" + dias[i]  + "</p>"+ "<p>" + "<b>" + "Temperatura: " + "</b>" + temperatura[i] + " ºC </p>" + "<hr>")
+    } */
+
+</script>

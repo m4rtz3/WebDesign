@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números iguais</title>
+
+    <script>
+
+        let a = parseInt(prompt("Digite o primeiro número inteiro"));
+        let b = parseInt(prompt("Digite o segundo número inteiro"));
+        let c = parseInt(prompt("Digite o terceiro número inteiro"));
+
+        if (a == b && b == c && c == a) {
+            document.write("Os três números são iguais")
+        } else if (a != b) {
+            if (a > b) {
+                document.write("Esse é o menor número " + b);
+                window.print();
+            } else {
+                document.write("Esse é o menor número " + a);
+                window.print();
+            }
+        } else if (b != c) {
+            if (b > c) {
+                document.write("Esse é o menor número " + c);
+                window.print();
+            } else {
+                document.write("Esse é o menor número " + b);
+                window.print();
+            }
+        } else {
+            if (c > a) {
+                document.write("Esse é o menor número " + a);
+                window.print();
+            } else {
+                document.write("Esse é o menor número " + c);
+                window.print();
+            }
+        }
+
+    </script>
+
+</head>
+
+<body>
+</body>
+
+</html>

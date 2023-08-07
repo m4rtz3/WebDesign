@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWITCH CASE 2</title>
+
+    <script>
+
+        let produtoValor = parseFloat(prompt("Digite o valor do produto desejado"));
+        let escolhaPagamento = Number(prompt("Do 1 ao 4, qual o código de pagamento que você escolherá?"));
+        let produtoFinal;
+
+        if (escolhaPagamento > 4) {
+            alert("Não há essa condição de pagamento")
+        } else {
+
+            switch (escolhaPagamento) {
+                case 1:
+                    produtoFinal = produtoValor - (0.1 * produtoValor)
+                    alert("A condição escolhida foi à vista em dinheiro ou cheque, recebe 10% de desconto. Assim, o valor do produto final é de " + produtoFinal)
+                    break
+                case 2:
+                    produtoFinal = produtoValor - (0.05 * produtoValor)
+                    alert("A condição escolhida foi à vista no cartão de crédito, recebe 5% de desconto. Assim, o valor do produto final é de " + produtoFinal)
+                    break
+                case 3:
+                    produtoFinal = produtoValor / 2
+                    alert("A condição escolhida foi em duas vezes, preço normal da etiqueta sem juros. Assim, o valor do produto final é de " + produtoFinal)
+                    break
+                default:
+                    produtoFinal = (produtoValor / 3) + (0.1 * produtoValor)
+                    alert("A condição escolhida foi em três vezes, preço normal da etiqueta mais juros de 10%. Assim, o valor do produto final é de " + produtoFinal)
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>Exercício do dia 14/04</h1>
+</body>
+
+</html>

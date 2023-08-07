@@ -1,0 +1,35 @@
+<script>
+
+    let saque = Number(prompt("Qual será o valor do saque?"))
+
+    let nmNotas100 = Math.trunc(saque / 100)
+    saque = saque - (nmNotas100 * 100)
+
+    let nmNotas50 = Math.trunc(saque / 50)
+    saque = saque - (nmNotas50 * 50)
+
+    let nmNotas20 = Math.trunc(saque / 20)
+    saque = saque - (nmNotas20 * 20)
+
+    let nmNotas10 = Math.trunc(saque / 10)
+    saque = saque - (nmNotas10 * 10)
+
+    let nmNotas5 = Math.trunc(saque / 5)
+    saque = saque - (nmNotas5 * 5)
+
+    let nmNotas2 = Math.trunc(saque / 2)
+    saque = saque - (nmNotas2 * 2)
+
+    if (saque > 0) {
+        nmNotasMais = (saque + 1) / 2
+
+        let nmNoTotal = nmNotas100 + nmNotas50 + nmNotas20 + nmNotas10 + nmNotas5 + nmNotas2 + nmNotasMais
+
+        document.write("O número de notas retiradas desse saque será de " + nmNoTotal)
+    } else {
+        nmNotaMais = 0
+
+        let nmNoTotal = nmNotas100 + nmNotas50 + nmNotas20 + nmNotas10 + nmNotas5 + nmNotas2
+        document.write("O número de notas retiradas desse saque será de " + nmNoTotal)
+    }
+</script>

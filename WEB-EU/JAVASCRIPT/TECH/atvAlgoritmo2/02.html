@@ -1,0 +1,52 @@
+<script>
+
+    // o usuário digitará um número qualquer do qual o algoritmo deverá imprimir o maior fator primo
+    let numero = parseInt(prompt("Digite um número"))
+    // criação de uma lista que conterá os fatores primos
+    let fatoresPrimos = []
+
+    // fazer uma verificação para ter certeza que o número digitado pelo usuário não é real, mas inteiro
+    if (isNaN(numero)) {
+        alert("O algoritmo só aceita números inteiros")
+    } else {
+
+        // imprimindo já o número que foi escolhido, pois essa variável mais para frente será substituída por outros valores
+        document.write("<p>" + "Número escolhido: " + numero + "</p>")
+
+        // decompor os numeros divisiveis pelo numero primo 2
+        while (numero % 2 == 0) {
+            fatoresPrimos.push(Number(2))
+            numero = Math.floor(numero / 2)
+        }
+
+        //nomeando contador
+        let i = 0
+
+        // decompondo por outros números primos em excessão do dois, que é o único número primo par
+        // o contador toda vez aumentará mais 2, mas ainda quando o contador se tornar um número composto e não primo, o número seria formado por números primos que já foram fatorados anteriormente
+        // logo, o número continuará sendo divisível somente por números primos
+        for (i = 3; i <= numero; i += 2) {
+            while (numero % i == 0) {
+                {
+                    fatoresPrimos.push(i)
+                    numero = Math.floor(numero / i)
+                }
+            }
+        }
+
+        // após isso, se ainda sobrar algo do número como um fator primo final, é aqui que ele será acrescentado na lista
+        if (numero > 2) {
+            fatoresPrimos.push(numero)
+        }
+
+        // descobrir a ultima posição da lista, pois esse será o maior fator primo
+        let tamanho = fatoresPrimos.length
+        tamanho = tamanho - 1
+        let ultimo = fatoresPrimos[Number(tamanho)]
+
+        document.write("<p>" + "Os seus fatores primos são " + fatoresPrimos + "." + "</p>")
+        document.write("<p>" + "Sendo o maior fator primo desse número: " + ultimo + "." + "</p>")
+
+        window.print()
+    }
+</script>

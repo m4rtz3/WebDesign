@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWITCH CASE 3</title>
+
+    <script>
+
+        let idade = parseInt(prompt("Qual a idade do nadador"));
+
+        /* if (idade > 0) {
+            switch (idade) {
+                case 5:
+                case 6:
+                case 7:
+                    alert("Esse nadador é da categoria Infantil A");
+                    break
+                case 8:
+                case 9:
+                case 10:
+                    alert("Esse nadador é da categoria Infantil B");
+                    break
+                case 11:
+                case 12:
+                case 13:
+                    alert("Esse nadador é da categoria Juvenil A")
+                    break
+                case 14:
+                case 15:
+                case 16:
+                case 17:
+                case 18:
+                    alert("Esse nadador é da categoria Juvenil B")
+                default:
+                    alert("Esse nadador é da categoria Adulto")
+            }
+        } else {
+            alert("Você digitou um número negativo ou escreveu de forma crescente. Recarregue a página e digite com números.")
+        } */
+
+        if (5 <= idade <= 7) {
+            alert("Esse nadador é da categoria Infantil A");
+        } else if (8 <= idade <= 10) {
+            alert("Esse nadador é da categoria Infantil B");
+        } else if (11 <= idade <= 13) {
+            alert("Esse nadador é da categoria Juvenil A");
+        } else if (14 <= idade <= 18) {
+            alert("Esse nadador é da categoria Juvenil B");
+        } else {
+            alert("Esse nadador é da categoria Adulto")
+        }
+    </script>
+
+</head>
+
+<body>
+    <h1>Exercício do dia 14/04</h1>
+</body>
+
+</html>

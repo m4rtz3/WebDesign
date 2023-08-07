@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+
+* {
+    color: #000;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* header */
+
+header {
+    height: 20vh;
+    padding: 0px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    width: 150px;
+}
+
+header .menu_icon {
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+/* menu de navegação */
+
+.menu_principal {
+    display: none;
+    background-color: rgb(187, 187, 187);
+    width: 100vw;
+    height: 100vh;
+    position:absolute;
+    top: 20vh;
+    /* acima era 21vh, mudei só pra ficar em cima do banner */
+    left: 0vh;
+}
+
+.menu_principal ul {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    padding-left: 5%;
+}
+
+.menu_principal ul li {
+    list-style: none;
+    padding: 30px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2.5em;
+}
+
+.menu_principal a {
+    text-decoration: underline;
+}
+
+#toggle {
+    display: none;
+}
+
+/* algo */
+
+div.home {
+    display: none;
+}
+
+div.home .doHome {
+ list-style: none;
+padding: 10px 0px;
+margin: 0px;
+text-transform: uppercase;
+font-weight: bold;
+font-size: 2.0em;
+}
+
+div.home .doHome .menuzinho {
+    text-decoration: none;
+}
+
+/* banner principal */
+
+main .banner_home .banner_principal {
+    max-width: 100vw;
+    width: 100%;
+}
+
+.novidades, .promocoes {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3%;
+}
+
+.novidades h1, .promocoes h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 40px;
+}
+
+.novidades span, .promocoes span {
+    font-size: 25px;
+}
+
+.novidades .produto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5%;
+}
+
+.novidades .produto img {
+    max-width: 50vw;
+    width: 50vw;
+}
+
+.novidades .produto h3 {
+    font-weight: 600;
+}
+
+/* divisoria */
+
+div.divisoria {
+    background-image: url(../imagens/bg_div.webp);
+    max-width: 100vw;
+    height: 40px;
+}
+
+/* promocoes */
+
+.promocoes article {
+    margin: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.promocoes article .imagem_promo {
+    max-width: 70vw;
+}
+
+.promocoes article h3 {
+    margin-top: 5%;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+footer {
+    background-image: url(../imagens/bg_div.webp);
+    max-width: 100vw;
+    height: 40px;
+}
+
+footer p {
+    color: white;
+    padding: 5px 0px;
+    text-align: center;
+    background-color: black;
+}
+
+.creditos {
+    color: white;
+    font-weight: bolder;
+}
+
+main .contato h1 {
+    margin: 15px;
+    font-size: 600;
+}
+
+.contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form_contato {
+    display: flex;
+    justify-content: center;
+    margin: 5%;
+    flex-direction: column;
+    align-items: center;
+}
+
+.grupo_form {
+    display: flex;
+    flex-direction: column;
+}
+
+.grupo_form label {
+    font-family: "Roboto Condensed";
+    font-size: 1.5em;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+.campoForm {
+    border: solid 4px black;
+    border-radius: 5px;
+    padding: 10px 30px;
+    margin: 15px 0px;
+    font-size: 1.5em;
+    width: 20vw;
+}
+
+#enviar {
+    background-color: #444;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    width: 30vw;
+}
+
+@media (min-width: 768px) {
+
+    .novidades, .promocoes {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .novidades .produto img {
+        max-width: 12vw;
+        width: 12vw;
+        border-radius: 150px 150px 150px 150px;
+        margin-bottom: 10%;
+    }
+
+    .novidades h1, .promocoes h1 {
+        flex-basis: 100%;
+    }
+
+    .menu_responsivo {
+        display: none;
+    }
+
+    .menu_principal {
+        display: block;
+        position: relative;
+        top: 0;
+        width: 60vw;
+        height: 15vh;
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    .menu_principal .nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .menu_principal .nav li {
+        font-size: 1.8em;
+    }
+
+    .menu_principal a {
+        text-decoration: none;
+        padding: 10px;
+    }
+
+    .menu_principal a:hover {
+        background-color: black;
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+    }
+
+}

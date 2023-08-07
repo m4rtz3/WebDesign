@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triângulo</title>
+
+    <script>
+
+        let ladoUm = parseInt(prompt("Digite o número que represente o primeiro lado de um possível triângulo"));
+        let ladoDois = parseInt(prompt("Digite o número que represente o segundo lado de um possível triângulo"));
+        let ladoTres = parseInt(prompt("Digite o número que represente o terceiro lado de um possível triângulo"));
+
+        if (ladoUm < ladoDois + ladoTres && ladoDois < ladoUm + ladoTres && ladoTres < ladoDois + ladoUm) {
+            document.write("Os lados registrados representam um triângulo!")
+        } else {
+            document.write("Os lados registrados não representam um triângulo.")
+        }
+
+    </script>
+
+</head>
+
+<body>
+</body>
+
+</html>

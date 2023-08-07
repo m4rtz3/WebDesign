@@ -1,0 +1,27 @@
+<script>
+
+    /*  exemplo usando um vetor com o espaço "lenght" vazio, logo não determinado */
+
+    let i = 0
+    /* i igual a indice, não posição */
+    let primos = []
+    let naoprimos = []
+    let numbers = []
+    let numeros
+
+    for (i = 0; i < 10; i++) {
+        let numeros = parseInt(prompt("valor"))
+        numbers.push(numeros)
+    }
+
+    for (cont = 0; cont < numbers[i]; cont++) {
+        if ((numbers[i] % 2 == 0) || (numbers[i] == 2)) {
+            primos.push(numbers[i])
+        } else {
+            naoprimos.push(numbers[i])
+        }
+    }
+
+    console.log(primos)
+
+</script>

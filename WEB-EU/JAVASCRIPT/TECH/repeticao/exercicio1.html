@@ -1,0 +1,19 @@
+<script>
+    let vlrIntUm = parseInt(prompt("Digite o primeiro valor"))
+    let vlrIntDois = parseInt(prompt("Digite o segundo valor"))
+
+    if (vlrIntUm > vlrIntDois) {
+        document.write("O segundo valor deve ser maior que o primeiro, recarregue a página")
+    } else if (vlrIntUm < 0 || vlrIntDois < 0) {
+        document.write("Os valores não podem ser negativos!")
+    } else {
+
+        let numero = vlrIntUm + 0
+        while (numero <= vlrIntDois) {
+            document.write(numero + " ")
+            numero = numero + 1
+        }
+
+    }
+
+</script>
